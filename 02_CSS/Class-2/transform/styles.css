@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+    color:white;
+}
+
+.box{
+    background-color:aqua;
+    color:black;
+    margin:200px;
+    /* transform: translate(100px,100px); */
+    /* transform:rotate(-45deg) */
+    /* transform: scale(4); */
+    /* transform:scale(2,3) */
+    /* transform:scaleY(5) */
+    transform:skew(-45deg)
+
+
+
+
+    /* scale(x,y) - first attribute -x , second attribute-y
+    x - vertical scaling
+    y - horizontal scaling
+    
+    */
+
+  
+
+
+
+}

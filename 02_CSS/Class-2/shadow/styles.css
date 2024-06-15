@@ -1,0 +1,32 @@
+h1{
+    text-shadow:3px 3px 3px red;
+    text-shadow:3px 3px 3px red, 5px 5px 5px blue;
+}
+
+body{
+    background-color:black;
+    color:white;
+}
+
+.box{
+    background-color:aqua;
+    margin:50px;
+    width:200px;
+    height:200px;
+    box-shadow:-20px -20px 15px green,20px 20px 20px coral;
+    color:red;
+}
+/* hoemwork to add borders on a text */
+.para{
+    font-size: 80px;
+    text-shadow:1px 1px 1px red,-1px -1px 1px red;
+}
+
+.box2{
+    width:200px;
+    height:200px;
+    color:black;
+    background-color:aqua;
+    
+}
+

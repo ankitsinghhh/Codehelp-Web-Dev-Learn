@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        .box{
+            width:500px;
+            height:500px;
+            background-image:linear-gradient(coral,white,green);
+            margin:50px;
+            position:relative;
+            box-shadow: 10px 10px 10px grey, -10px -10px 10px grey;
+
+        }
+        
+        .one{
+            position:absolute;
+
+            top:0px;
+            left:0px;
+
+        }
+        .two{
+            position:absolute;
+            top: 0px;
+            right:0px;
+        }
+        .three{
+            position:absolute;
+            bottom:0px;
+            left:0px;
+        }
+        .four{
+            position: absolute;
+            bottom:0px;
+            right:0px;
+        }
+        .five{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: linear-gradient(to bottom, orange , #fff, green );
+            color: #000;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <p class="one">Hello JI</p>
+        <p class="two">Hello JI</p>
+        <p class="three">Hello JI</p>
+        <p class="four">Hello JI</p>
+        <p class="five">Hello JI</p>
+
+
+    </div>
+    
+</body>
+</html>
