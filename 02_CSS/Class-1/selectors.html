@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* element selector ,type selecor, tag selector */
+        body{
+            background-color: #212121;
+            color:white
+        }
+        /* p{
+            color:green;
+            font-size: larger;
+            background-color:yellow;
+
+
+        }
+        h1{
+            background-color: aqua;
+        } */
+
+        /* class selector */
+        .green{
+            color:green;
+        }
+        .yellow{
+            color:yellow;
+        }
+        .small{
+            font-size: larger;
+        }
+        .big{
+            font-size:smaller
+        }
+
+        /* id selector */
+        /* #Submit{
+            color:red;
+            background-color: yellow;
+        }
+        #para{
+            background-color: aqua;
+            color:maroon;
+            font-size: 20px;
+            font-weight: 800;
+        } */
+        /* Pseudo-classes Selector - it shows the special state of a element */
+        button:hover{
+            color:blue;
+            background-color: yellow;
+        }
+        /* a:hover{
+            color:yellow;
+        } */
+         /* .link-color:hover{
+            color:violet
+         } */
+          #linkid:hover{
+            color:maroon
+          }
+
+          /* Multiple Selector */
+          /* example
+          table,td,tr,thP
+          color:green
+          */
+
+          /* Nested SElector */
+          .parent{
+            background-color: red;
+            .child{
+                background-color: yellow;
+                color:black;
+                :hover{
+                    color:white
+                }
+                
+            }
+          }
+
+          /* Attribute Selector */
+          a[target="_blank"]{
+            background-color: yellow;
+          }
+
+          /* examples : 
+          
+          [title~="flower"] {
+             border: 5px solid yellow;
+            }
+          
+            [class|="top"] {
+                 background: yellow;
+            }
+          
+          
+          
+          
+          
+          
+          
+          */
+
+
+
+    
+    </style>
+</head>
+<body>
+    <!-- css syntax :
+     
+
+    selector{
+        property:value;
+    }
+
+    -->
+
+    <!-- element selector, tag selector, type selector -->
+    <!-- <p>This is a paragraph tag</p>
+    <h1>This is my First heading</h1>
+    <h1>tthis is second heading</h1>
+    <p>This is second paragraph</p> -->
+
+    <!-- Class Selector -->
+     <p class="green">This is a paragraph</p>
+     <p class="green">This is a paragraph</p>
+     <p class="yellow">This is a paragraph</p>
+
+     <h1 class="small">Heading 1</h1>
+     <h2 class="small">Heading 2</h2>
+     <h3 class="small">Heading 3</h3>
+     <h4 class="big">Heading 4</h4>
+     <h5 class="big">Heading 5</h5>
+     <h6 class="big">Heading 6</h6>
+
+     <!--ID selector-->
+     <button id="Submit">Submit</button><br>
+    
+     <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut vero magnam earum possimus libero, a laborum rem molestias sunt eos neque illo quis, porro dolores nobis optio inventore nemo culpa!/p>
+
+     <!--Pseudo-classes Selector - it shows the special state of a element-->
+     <a href="#" class="link-color" id="linkid">Buy DSA Supreme</a>
+
+     <!-- Nested Selector -->
+      <div class="parent">
+        This is a div-start
+        <p class="child">Hello world , have a look // <span class="span">This is a span</span> // at this example</p>
+        This is a div-end
+      </div>
+      <br>
+      <br>
+
+      <!-- Attribute Selector -->
+       <a href="#">Click here </a><br>
+       <a href="#" target="_blank">Click here to go to new tab</a><br>
+       <a href="#" target="_blank">Click here to go to new tab</a><br>
+       <a href="#" target="_blank">Click here to go to new tab</a><br>
+
+    
+
+
+
+
+
+
+</body>
+</html>
