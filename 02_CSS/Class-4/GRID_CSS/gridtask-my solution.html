@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Task</title>
+    <style>
+        *{
+            padding: 0px;
+            margin:0px;
+            box-sizing:border-box;
+            
+        }
+
+        .wrapper{
+            background-color: aqua;
+            display:grid;
+            border:3px solid black;
+            height:100vh;
+            width:100vw;
+
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows:repeat(10,1fr);
+
+        }
+        .header{
+            background-color: rgb(2, 115, 130);
+            color:white;
+            border: 1px solid black;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .side-content{
+            background-color: rgb(122, 97, 247);
+            color:white;
+            border: 1px solid black;
+            grid-row-start: 2;
+            grid-row-end: 10;
+        }
+        .main-content{
+            background-color: rgb(112, 47, 47);
+            color:white;
+            border: 1px solid black;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 10;
+        }
+        .footer{
+            background-color: rgb(99, 9, 88);
+            color:white;
+            border: 1px solid black;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="header">Header</div>
+        <div class="side-content">side-content</div>
+        <div class="main-content">main-content</div>
+        <div class="footer">footer</div>
+
+    </div>
+</body>
+</html>
