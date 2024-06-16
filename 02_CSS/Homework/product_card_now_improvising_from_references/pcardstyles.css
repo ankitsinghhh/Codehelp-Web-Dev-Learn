@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500&display=swap');
+
+:root{
+    --cream:#f2ebe3;
+    --grey:#6c7289;
+    --green:#3c8067;
+    --darkGreen:#2f4c40;
+}
+
+
+
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+}
+
+
+
+
+.wrapper{
+    background-color :var(--cream);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: whitesmoke;
+    height: 430px;
+    width:700px;
+    border-radius:20px;
+    box-shadow: 0px -1px 20px -5px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 1.35fr 1.65fr;
+
+}
+
+.cupimage{
+    background-image: url(images/mug.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px 0px 0px 20px;
+
+    /* object-fit: cover; */
+
+
+
+}
+
+.details{
+    
+    padding: 1.5rem 2rem;
+    background-color: #fff;
+    color: var(--grey);
+    border-radius: 0px 20px 20px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    
+}
+del{
+    color: grey;
+}
+#carticon{
+    margin-right: 0.9rem;
+}
+
+button{
+    width: 100%;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--green);
+    border: none;
+    border-radius: 10px;
+    padding: 0.9rem 0;
+    margin-top: 1.6rem;
+    cursor: pointer;
+    transition: all 0.1s;
+    
+}
+button:hover{
+    background-color: var(--darkGreen);
+}
+
+.title1{
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    font-weight:lighter;
+
+}
+.title2{
+    width: 80%;
+    font-size: 2rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: #000;
+    line-height: 2rem;
+    margin-top: 1.2rem;
+}
+.para{
+    /* font-size:1.1rem; */
+    /* font-family: sans-serif; */
+    width: 96%;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+}
+.pricenow{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--green);
+    margin-right: 0.6rem;
+}
+.pricebef{
+    font-size: 1rem;
+    text-decoration: line-through;
+}

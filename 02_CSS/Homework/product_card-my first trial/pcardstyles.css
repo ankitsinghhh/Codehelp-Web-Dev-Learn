@@ -1,0 +1,88 @@
+
+
+
+
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+}
+
+
+
+
+.wrapper{
+    background-color :antiquewhite;
+    height:100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: whitesmoke;
+    height: 450px;
+    width:700px;
+    border-radius:20px;
+    box-shadow: 5px 5px 10px rgb(185, 180, 180),-5px -5px 10px rgb(185, 180, 180);
+    display: grid;
+    grid-template-columns: 1.1fr 1.5fr;
+
+}
+
+.cupimage{
+    background-image: url(images/mug.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px 0px 0px 20px;
+
+    /* object-fit: cover; */
+
+
+
+}
+
+.details{
+    padding: 1.8rem;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+}
+del{
+    color: grey;
+}
+#carticon{
+    margin-right:1rem;
+}
+
+button{
+    padding:0.9rem;
+    font-size: 1rem;
+    background-color: green;
+    color: white;
+    border-radius: 15px;
+    border: 0px;
+    
+}
+
+.title1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    font-weight:lighter;
+
+}
+.title2{
+    font-size: 2.8rem;
+}
+.para{
+    /* font-size:1.1rem; */
+    /* font-family: sans-serif; */
+}
+.pricenow{
+    font-size:2rem;
+    color: green;
+    font-weight: 900;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
