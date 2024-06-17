@@ -1,0 +1,165 @@
+:root{
+    --grey:rgba(95, 94, 94, 0.289);
+    --blue:#3a86ff;
+    --green:#29bf12;
+}
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width:1000px;
+    margin:30px auto;
+    height:100%;
+    overflow-y:auto;
+    overflow-x:hidden
+}
+
+header{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items: center;
+}
+header a{
+    color:grey
+}
+
+header h1{
+    font-style:underline;
+}
+
+.posts-list{
+    margin-top:2rem;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    height:100%;
+    grid-gap:10px;
+
+}
+
+.post-card{
+    border:5px solid var(--grey);
+    padding: 25px;
+    height:300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+.post-card .category{
+    color:var(--blue);
+    font-weight:800;
+    font-size:1.1rem;
+}
+
+.post-card h2{
+    font-size:1.8rem;
+    margin-top:0.5rem;
+}
+
+.post-card .date{
+    font-weight: 500;
+    color:grey;
+    margin-bottom:10px;
+}
+
+.post-card:hover{
+    border:3px solid var(--grey);
+}
+
+.post2 .category{
+    color:var(--green)
+}
+
+
+/* blogposts.css */
+
+.content{
+    margin-top: 1rem;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 3.5fr 1.5fr;
+    grid-gap:50px;
+}
+
+.content p {
+    margin:0.3rem 0 1rem 0;
+    
+    /* color:red */
+}
+
+
+.first-half{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.first-half ul,
+.first-half ol {
+    padding-left: 2rem;
+}
+
+.second-half li{
+    list-style-type:none;
+}
+
+.second-half .about{
+    background-color: rgba(201, 203, 203, 0.09);
+    padding: 1rem 0 1rem 1rem;
+}
+
+.first-half span{
+    color:var(--blue)
+}
+.first-half .date{
+    margin-bottom: 1rem;
+}
+.second-half h3{
+    margin:1rem 0 0.5rem 0;
+}
+
+.second-half p,ul{
+    padding-bottom: 1rem;
+}
+
+.box{
+    border:1px dashed  black;
+}
+.boxp{
+    
+    padding-bottom:1rem;
+}
+.content h1,h2,h3,h4{
+    margin-top: 0.5rem;
+}
+
+
+button{
+    background-color: rgba(185, 187, 188, 0.121);
+    color:grey;
+    padding: 0.5rem 1rem;
+    border:none;
+    border-radius: 20px;
+    cursor: pointer;
+    border:1px solid grey;
+    font-weight:bold;
+    margin-right:0.5rem;
+}
+button:hover{
+    background-color: rgba(168, 219, 236, 0.347);
+    color:var(--blue);
+    transition:0.2s;
+    border:1px solid var(--blue);
+}
+
+
+
+
