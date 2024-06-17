@@ -1,0 +1,41 @@
+.container{
+    height:500px;
+    width:500px;
+    background-color: green;
+    border:3px solid red;
+    display:flex;
+}
+
+.box{
+    border:2px solid orange;
+    background-color: aqua;
+    height:150px;
+    width:150px;
+    margin:20px;
+    /* transition:1s; */
+    /* transition-property: all; */
+    /* transition-property:background-color; */
+    /* transition-delay:2s */
+
+    /* transition:background-color 1s ease 3s; */
+    /* transition:transform 5s ease 1s; */
+    /* transition:all 200ms ease ; */
+
+    /* transition:transform 3s cubic-bezier(1,-0.45, 0.06, 1.63) ; */
+    /* transition:transform 3s cubic-bezier(0, 0, 0, 2.74) ; */
+
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: ease;
+    transition-delay:1s;
+
+}
+.box:hover{
+    /* transform:rotate(45deg);
+    background-color:brown ; */
+
+    /* transform: translateX(500px); */
+    transform: scale(2) translateX(500px) rotate(360deg) ;
+    background-color: brown;
+    
+}
