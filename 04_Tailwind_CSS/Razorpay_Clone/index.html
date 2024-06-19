@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razorpay</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <!-- Navar Section -->
+    
+    <nav class="bg-deepBlue ">
+        <div class="relative w-[1080px] mx-auto flex item-center justify-between">
+            <!--logo-->
+            <a href="/" class="cursor-pointer py-7 pr-7">
+                <img src="./assets/logo.svg" alt=""
+                width="125px" height="30px">
+            </a>
+
+            <ul class="flex space-x-6">
+                <li class="text-white font-mullish py-7 hover:text-lightBlue cursor pointer transition-all duration-200 relative group"> <!-- group is used when we want to set child elements property on basic of parent element -->
+                    <a href="#">Payments</a>
+                    <!--ye niche ka div , hover krne pe jo underline aa rha hai vo bna rha hai -->
+                    <div class="absolute bottom-0 w-full h-1 bg-lightBlue hidden group-hover:block transition-all duration-200"> <!--at first it will be hidden but when its parent element is hovered , this underline will appwar-->
+
+                    </div>
+                </li>
+                <li class="text-white font-mullish py-7 hover:text-lightBlue cursor pointer transition-all duration-200 relative group">
+                    <a href="#">Banking</a>
+                    <div class="absolute bottom-0 w-full h-1 bg-lightBlue hidden group-hover:block transition-all duration-200">
+
+                    </div>
+                </li>
+                <li class="text-white font-mullish py-7 hover:text-lightBlue cursor pointer transition-all duration-200 relative group">
+                    <a href="#">Corporate Card</a>
+                   
+                </li>
+                <li class="text-white font-mullish py-7 hover:text-lightBlue cursor pointer transition-all duration-200 relative group">
+                    <a href="#">Payroll</a>
+                    <!-- corporate card aur payroll me niche ki line nhi aegi -->
+                 
+                </li>
+                <li class="text-white font-mullish py-7 hover:text-lightBlue cursor pointer transition-all duration-200 relative group">
+                    <a href="#">Resources</a>
+                    <div class="absolute bottom-0 w-full h-1 bg-lightBlue hidden group-hover:block transition-all duration-200">
+
+                    </div>
+                </li>
+                <li class="text-white font-mullish py-7 hover:text-lightBlue cursor pointer transition-all duration-200 relative group">
+                    <a href="#">Support</a>
+                    <div class="absolute bottom-0 w-full h-1 bg-lightBlue hidden group-hover:block transition-all duration-200">
+
+                    </div>
+                </li>
+                <li class="text-white font-mullish py-7 hover:text-lightBlue cursor pointer transition-all duration-200 relative group">
+                    <a href="#">Pricing</a>
+                    <div class="absolute bottom-0 w-full h-1 bg-lightBlue hidden group-hover:block transition-all duration-200">
+
+                    </div>
+                </li>
+            </ul>
+
+            <div class="flex space-x-6 ">
+                <img src="assets/india-flag.svg" alt="indian flag" 
+                width="28px"
+                height="20px">
+            </div>
+            <button class="my-3 py-3 px-5 font-mullish text-white border-lightBlue border rounded-sm text-sm font-bold" >
+                Log In
+            </button>
+            <button
+            class="my-3 py-3 px-4 font-mullish rounded-sm text-sm font-bold bg-white text-lightBlue300 border transition-all duration-200 hover:text-lightBlue500"
+            >Sign Up  &#10132;</button>
+
+        </div>
+    </nav>
+
+
+</body>
+</html>
