@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Mulish");
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'mulish';
+}
+
+.navbar-section{
+    background-color: #02042A;
+    width:100vw;
+    
+    
+}
+
+.nav-elements-container{
+    width:1080px;
+    margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:100%
+}
+
+.logo{
+    margin-right: 1rem;
+    
+}
+
+.link-and-btn-container{
+    display: flex;
+    gap:1.5rem;
+    align-items: center;
+
+}
+
+.links-container{
+    display:flex;
+    gap:1.5rem;
+   
+}
+
+.links-container li{
+    padding: 1.75rem 0;
+    position:relative;
+}
+
+.link-element{
+    color:white;
+    text-decoration:none;
+    padding: 1.75rem 0;
+    
+}
+
+.flag-and-buttons{
+    display: flex;
+    align-items: center;
+    gap:1.5rem;
+  
+    
+}
+
+button{
+    padding:1.25rem;
+}
+
+.login{
+    background-color: #02042A;
+    color:white;
+    border:1px solid blue;
+    border-radius: 3px;
+    transition: all 0.2s;
+}
+.login:hover{
+    color:whitesmoke;
+    cursor:pointer;
+    font-style: bolder;
+}
+.signup{
+    color:blue;
+    background-color: white;
+    border:none;
+    transition: all 0.2s;
+    cursor:pointer;
+    font-weight: 900;
+    border-radius: 2px;
+    
+}
+.signup:hover{
+  color:darkblue
+}
+
+
+.link-and-underline-container{
+    position: relative;
+    height:100%;
+   
+    
+
+}
+
+.underline{
+    background-color: rgb(61, 70, 241);
+    position: absolute;
+    bottom:0;
+    width:100%;
+    height:0.25rem;
+    opacity: 0;
+
+   
+    transition: all 0.5s;
+    
+}
+
+.link-and-underline-container:hover .underline{
+    opacity: 1;
+   
+    
+   
+}
+
+
+
+li{
+    list-style-type:none;
+}
+
+
+
