@@ -22,6 +22,10 @@
             padding-bottom: 12rem;
         }
 
+        .CtaSection {
+            background-size: 100% 100%;
+        }
+
         .companiesList {
             animation: 10s infinite linear moveCompany;
         }
@@ -1118,9 +1122,8 @@ bg-no-repeat bg-cover bg-center mt-14 relative corefeaturesection ">
 
                 <!--heading and underline-->
 
-                <img src="assets/feature-section1-dottedrows.png" alt=""
-                loading="lazy"
-                class="absolute w-[200px] top-[8rem] left-[2rem] -z-10"> <!--dootted image-->
+                <img src="assets/feature-section1-dottedrows.png" alt="" loading="lazy"
+                    class="absolute w-[200px] top-[8rem] left-[2rem] -z-10"> <!--dootted image-->
                 <h2 class="font-mullish font-extrabold text-2xl text-deepBlue text-center">An Experience <br>
                     People Love to Talk About</h2> <!--heading-->
                 <div class="w-6 h-1 bg-greenLight mx-auto my-4"></div> <!--underline div-->
@@ -1129,62 +1132,58 @@ bg-no-repeat bg-cover bg-center mt-14 relative corefeaturesection ">
                 <!-- left-button -->
                 <button class="w-[100px] h-[100px] bg-[#f4f8ff] rounded-full absolute left-0 top-1/2
                 flex justify-center items-center ">
-                 <div class="w-[65%] h-[65%] bg-[#f4f8ff] rounded-full flex justify-center items-center
-                 mix-blend-multiply"> <!--mix-blend-multiply -ye dono circles ka colour same hai , isiliye unko differentiate krne k liye ye property use hui h -->
-                   <i
-                   data-feather="chevron-right"
-                   class="stroke-[5px] w-6 h-6  text-gray-400 rotate-180"
-                 ></i>
-                 </div>
-               </button>
+                    <div class="w-[65%] h-[65%] bg-[#f4f8ff] rounded-full flex justify-center items-center
+                 mix-blend-multiply">
+                        <!--mix-blend-multiply -ye dono circles ka colour same hai , isiliye unko differentiate krne k liye ye property use hui h -->
+                        <i data-feather="chevron-right" class="stroke-[5px] w-6 h-6  text-gray-400 rotate-180"></i>
+                    </div>
+                </button>
 
 
                 <!-- right-button -->
                 <button class="w-[100px] h-[100px] bg-[#f4f8ff] rounded-full absolute right-0 top-1/2
                 flex justify-center items-center ">
-                 <div class="w-[65%] h-[65%] bg-[#f4f8ff] rounded-full flex justify-center items-center
-                 mix-blend-multiply"> <!--mix-blend-multiply -ye dono circles ka colour same hai , isiliye unko differentiate krne k liye ye property use hui h -->
-                   <i
-                   data-feather="chevron-right"
-                   class="stroke-[5px] w-6 h-6  text-gray-400"
-                 ></i>
-                 </div>
-               </button>
+                    <div class="w-[65%] h-[65%] bg-[#f4f8ff] rounded-full flex justify-center items-center
+                 mix-blend-multiply">
+                        <!--mix-blend-multiply -ye dono circles ka colour same hai , isiliye unko differentiate krne k liye ye property use hui h -->
+                        <i data-feather="chevron-right" class="stroke-[5px] w-6 h-6  text-gray-400"></i>
+                    </div>
+                </button>
 
 
                 <!--main-content-->
                 <div class="flex flex-row max-w-[960px] items-center mx-auto my-20  space-x-[10rem]">
                     <!-- left-image -->
-                    <img src="assets/testimonial.jpg" alt=""
-                    loading="lazy"
-                    height="320px"
-                    width="320px"
-                    class="rounded-xl">
+                    <img src="assets/testimonial.jpg" alt="" loading="lazy" height="320px" width="320px"
+                        class="rounded-xl">
 
                     <!-- right-part -->
                     <div class="max-w-[400px] ">
-                        <img src="assets/quotes.svg" alt=""
-                        loading="lazy"
-                        width="35px"
-                        height="40px"
-                        class="mb-2"
-                        >
+                        <img src="assets/quotes.svg" alt="" loading="lazy" width="35px" height="40px" class="mb-2">
                         <p class=" font-mullish text-3xl font-extralight ">Readymade Closed Wallet
                             Solution For Quick Refunds</p>
                         <a href="#" class="text-grayText italic underline">Learn More</a>
                         <p class="font-mullish font-extrabold text-2xl">Lorem Ipsum</p>
                         <p class="font-mullish font-medium">CEO,XYZ Engineering Company</p>
-                        <img src="assets/fake-company-logo.png" alt=""
-                        loading="lazy"
-                        width="80px"
-                        height="40px">
+                        <img src="assets/fake-company-logo.png" alt="" loading="lazy" width="80px" height="40px">
                     </div>
 
                 </div>
 
                 <!--  6-dot-wala-div  -->
-                <div>
-                    <div></div>
+                <div class="flex flex-row mx-auto space-x-2 w-full justify-center">
+                    <!-- dot-1 -->
+                    <div class="h-[10px] w-[10px] bg-gray-300 rounded-full"></div>
+                    <!-- dot-2 -->
+                    <div class="h-[10px] w-[10px] bg-lightBlue300 rounded-full"></div>
+                    <!-- dot-3 -->
+                    <div class="h-[10px] w-[10px] bg-gray-300 rounded-full"></div>
+                    <!-- dot-4 -->
+                    <div class="h-[10px] w-[10px] bg-gray-300 rounded-full"></div>
+                    <!-- dot-5 -->
+                    <div class="h-[10px] w-[10px] bg-gray-300 rounded-full"></div>
+                    <!-- dot-6 -->
+                    <div class="h-[10px] w-[10px] bg-gray-300 rounded-full"></div>
                 </div>
 
 
@@ -1193,6 +1192,62 @@ bg-no-repeat bg-cover bg-center mt-14 relative corefeaturesection ">
 
             </div>
 
+        </section>
+
+
+        <!-- CTA - Section  -->
+        <section class="bg-[url(assets/CTABg.svg)] w-full bg-no-repeat bg-cover relative h-full CtaSection min-h-[510px]">
+
+            <!-- main-content-box -->
+            <div class="w-11/12 max-w-[1080px] flex flex-row items-center justify-between space-x-20 mx-auto pt-16">
+
+                <!-- left-part -->
+                <div class=" flex flex-col gap-5 mt-12 max-w-[600px]">
+                    <h2 class="font-mullish font-bold text-2xl text-white">Supercharge your business with Razorpay</h2>
+                    <div class="w-6 h-1 bg-greenLight"></div> <!--underline-->
+                    <p class="font-mullish text-white">Sign up now to experience the future of payments and offer <br>
+                        your customers the best checkout experience.</p>
+
+                    <ul class="flex flex-row flex-wrap gap-x-11 text-white gap-y-3">
+                        <li class="font-mullish text-white flex flex-row ">
+                            <i data-feather="check" class="text-greenLight"></i>
+                            <span>Quick Onboarding
+                            </span>
+                        </li>
+                        <li class="font-mullish text-white flex flex-row ">
+                            <i data-feather="check" class="text-greenLight"></i>
+                            <span>Access to entire product suite
+
+                            </span>
+                        </li>
+                        <li class="font-mullish text-white flex flex-row ">
+                            <i data-feather="check" class="text-greenLight"></i>
+                            <span>API access
+
+                            </span>
+                        </li>
+                        <li class="font-mullish text-white flex flex-row ">
+                            <i data-feather="check" class="text-greenLight"></i>
+                            <span>24x7 support
+                            </span>
+                        </li>
+                    </ul>
+
+                    <button class="min-w-[32px] font-mullish text-sm font-bold bg-white text-lightBlue300 border flex
+                    rounded-sm items-center hover:text-lightBlue500 transition-all duration-200 py-3 px-4 place-self-start"> 
+                        Sign Up &#10132; 
+                    </button>
+
+                </div>
+
+                <!-- right side wali iamge  -->
+                <img src="assets/ctaImg.svg" alt=""
+                loading="lazy"
+                width="240px"
+                height="282px"
+                class="mt-16 pt-4">
+
+            </div>
         </section>
 
 
