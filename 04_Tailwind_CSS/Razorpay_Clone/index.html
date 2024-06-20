@@ -43,36 +43,9 @@
 
         }
 
-       
-
-        @media(max-width:1100px){
-            
-           .signup{
-            display: none;
-           }
-           .flag{
-            display: none;
-           }
-           .links-list{
-            display:none;
-           }
-           .navbar{
-            padding-right:1.5rem;
-            padding-left:1.5rem;
-            width: auto;
-           }
 
 
-           
-
-            
-        }
-
-        @media(min-width:1100px){
-            .hamburger{
-                display:none;
-            }
-        }
+      
     </style>
 
 
@@ -88,7 +61,7 @@
         <!-- Navbar k upr ka section  -->
         <div class="w-full h-[52px] bg-white relative">
             <div
-                class="w-0 h-0 absolute top-0 bottom-0 left-0 border-b-[52px] border-b-lightBlue border-r-[40px] border-r-transparent z-[14]">
+                class="w-0 h-0 absolute top-0 bottom-0 left-0 border-b-[52px] border-b-lightBlue border-r-[40px] border-r-transparent z-[14] ">
             </div>
             <div class="hidden lg:block w-2 h-[52px] bg-[#C4DDF9] skew-x-[38deg] absolute left-5 z-[12]"></div>
             <div class="w-[120px] h-[52px] bg-[#E7F1FD] skew-x-[38deg] absolute z-[10] left-4 lg:left-6"></div>
@@ -119,7 +92,7 @@
 
         <!-- navbar-section -->
         <nav class="bg-deepBlue ">
-            <div class="relative  w-[1080px] mx-auto flex item-center justify-between navbar">
+            <div class="relative px-4 lg:px-0  lg:w-[1024px] mx-auto flex item-center justify-between  ">
                 <!--logo-->
                 <a href="/" class="cursor-pointer py-7 pr-7">
                     <img src="./assets/logo.svg" alt="" width="125px" height="30px">
@@ -127,7 +100,7 @@
 
                 <!-- links-to-pages -->
 
-                <ul class="flex space-x-6 links-list">
+                <ul class="flex flex-row space-x-2 links-list">
                     <li
                         class="text-white font-mullish py-7 hover:text-lightBlue cursor pointer transition-all duration-200 relative group hidden lg:block">
                         <!-- group is used when we want to set child elements property on basic of parent element -->
@@ -185,28 +158,30 @@
                 </ul>
 
                 <!-- flag image + login / singup buttons -->
-                <div class="flex space-x-6 ">
+                <div class="flex space-x-3 ">
                     <img src="assets/india-flag.svg" alt="indian flag" width="28px" height="20px"
-                    class="hidden lg:block flag">
+                    class=" hidden lg:block">
               
                 <button
-                    class="my-4 py-3 px-5 font-mullish text-white border-lightBlue border rounded-sm text-sm font-bold ">
+                    class="my-4 py-2 px-3 block font-mullish text-white border-lightBlue border rounded-sm text-sm font-bold ">
                     Log In
                 </button>
 
                 <button
-                    class="my-4 py-3 px-5 font-mullish rounded-sm text-sm font-bold bg-white text-lightBlue300 border transition-all duration-200 hover:text-lightBlue500 hidden lg:flex signup">
+                    class="my-4 py-2 items-center px-3 font-mullish rounded-sm text-sm font-bold bg-white text-lightBlue300 border transition-all duration-200 hover:text-lightBlue500 hidden lg:block  ">
                     Sign Up &#10132;
                 </button>
 
-                <!-- hamburger -->
-                 <div class="flex flex-col gap-2 my-4 py-3 border px-2 rounded-sm border-lightBlue500 cursor-pointer hamburger">
-                    <div class="w-7 h-1 bg-white "></div>
-                    <div class="w-7 h-1 bg-white "></div>
-                    <div class="w-7 h-1 bg-white "></div>
-                   
+                    <!-- hamburger -->
+                <div class="flex flex-col gap-2 my-4 py-3 border px-2 rounded-sm border-lightBlue500 cursor-pointer  lg:hidden ">
+                        <div class="w-7 h-1 bg-white "></div>
+                        <div class="w-7 h-1 bg-white "></div>
+                        <div class="w-7 h-1 bg-white "></div>
+                       
+    
+                </div>
 
-                 </div>
+               
             </div>
 
             </div>
@@ -220,7 +195,7 @@
 
             <!-- inner div-which contains left & right part -->
             <div class="flex flex-col lg:flex-row justify-between items-center
-         mx-auto  w-10/12 max-w-[1080px]">
+         mx-auto  w-10/12 max-w-[1024px]">
                 <!-- left-part -->
                 <div class="text-white  gap-4 space-y-8">
                     <h1 class="font-mullish font-bold text-[40px] leading-[1.2] text-white">Power your finance, Grow
@@ -266,7 +241,7 @@
 
 
 
-            <div class="relative w-11/12 max-w-[1080px] mx-auto pt-4">
+            <div class="relative w-11/12 max-w-[1024px] mx-auto pt-4">
                 <!-- heading -->
                 <h2 class="font-mullish text-center text-2xl leading-[1.2] font-extrabold hidden md:block">Accept payments with Razorpay
                     Payment Suite</h2>
@@ -684,7 +659,7 @@
 
         <!-- feature-section-2 -->
         <section class="bg-[url(assets/feature-section-2BG.svg)] bg-no-repeat pb-[400px] bg-cover mt-14 pt-[20rem]">
-            <div class="w-10/12 max-w-[1080px] pt-4 mx-auto relative">
+            <div class="w-10/12 max-w-[1024px] pt-4 mx-auto relative">
                 <!--heading and underline container-->
                 <div>
                     <h2 class="font-mullish text-center text-2xl leading-[1.2] text-white font-bold">Explore Razorpay
@@ -768,7 +743,7 @@
                         </div>
                         <!-- backgorund image for content box-->
                         <img src="assets/buisness-banking.png" alt="" loading="lazy"
-                            class="absolute right-0 bottom-0 z-4 hidden md:max-w-[400px] lg:max-w-[600px] md:block lg:block">
+                            class="absolute right-0 bottom-0 z-4 hidden sm:max-w-[300px] md:max-w-[300px] lg:max-w-[500px] xl:max-w-[600px] md:block lg:block">
                     </div>
 
 
@@ -937,7 +912,7 @@
 
         <!--new-feature-section -->
         <section class="bg-white relative">
-            <div class="relative w-11/12 max-w-[1080px] mx-auto pt-4">
+            <div class="relative w-11/12 max-w-[1024px] mx-auto pt-4">
                 <img src="assets/feature-section1-dottedrows.png" alt="" loading="lazy"
                     class="absolute w-[233px] left-[300px] -top-[6rem] z-[10] hidden lg:block">
 
@@ -1065,7 +1040,7 @@
         <section class="w-full bg-[url(/assets/core-features-sectionBg.svg)]  
 bg-no-repeat bg-cover bg-center mt-14 relative corefeaturesection ">
 
-            <div class="relative w-11/12 max-w-[1080px] mx-auto md:pt-4 pt-[10rem] ">
+            <div class="relative w-11/12 max-w-[1024px] mx-auto md:pt-4 pt-[10rem] ">
                 <h2 class="font-mullish font-bold text-2xl text-center text-white">Features</h2>
                 <div class="w-6 h-1 bg-greenLight mx-auto mt-4 mb-6"></div>
                 <p class="font-mullish text-center max-w-[450px] text-white mx-auto">Empower your business with all the
@@ -1150,7 +1125,7 @@ bg-no-repeat bg-cover bg-center mt-14 relative corefeaturesection ">
         <!-- Join-Razorpay-Section  -->
         <section class="bg-[#F5F8FE] relative pt-40 pb-12 -mt-[200px] -z-50">
             <!-- inner-div-11/12 -->
-            <div class="w-11/12 max-w-[1080px] mx-auto relative flex flex-col md:flex-row">
+            <div class="w-11/12 max-w-[1024px] mx-auto relative flex flex-col md:flex-row">
 
                 <!-- left-part -->
                 <div class="sm:my-10 flex flex-col justify-center w-full md:max-w-[calc(100%-500px)] pt-10 md:pd-0">
@@ -1276,7 +1251,7 @@ bg-no-repeat bg-cover bg-center mt-14 relative corefeaturesection ">
             class="bg-[url(assets/CTABg.svg)] overflow-x-clip bg-repeat bg-cover relative md:h-full md:w-full h-[800px] w-[800px] CtaSection min-h-[510px]">
 
             <!-- main-content-box -->
-            <div class="w-11/12 max-w-[1080px] flex flex-row items-center justify-between space-x-20 mx-auto pt-16">
+            <div class="w-11/12 max-w-[1024px] flex flex-row items-center justify-between space-x-20 mx-auto pt-16">
 
                 <!-- left-part -->
                 <div class=" flex flex-col gap-5 mt-[10rem] md:mt-12 md:max-w-[600px] max-w-[90%] flex-wrap">
@@ -1337,7 +1312,7 @@ bg-no-repeat bg-cover bg-center mt-14 relative corefeaturesection ">
 
         <footer style="background: linear-gradient(to right, #eef9fe, #edf7ff)" class="-mt-[400px] md:-mt-[300px]">
             <div
-                class="w-10/12 pt-[400px] pb-10 md:pt-[350px] md:my-0 md:w-11/12 max-w-[1080px] mx-auto flex flex-col space-y-6 lg:space-y-0 lg:space-x-4 lg:flex-row justify-between">
+                class="w-10/12 pt-[400px] pb-10 md:pt-[350px] md:my-0 md:w-11/12 max-w-[1024px] mx-auto flex flex-col space-y-6 lg:space-y-0 lg:space-x-4 lg:flex-row justify-between">
                 <!-- column - 1 -->
                 <div class="flex flex-col md:max-w-[340px] lg:max-w-[260px]">
                     <img src="/assets/logo-dark.svg" loading="lazy" width="120px" height="24px" />
