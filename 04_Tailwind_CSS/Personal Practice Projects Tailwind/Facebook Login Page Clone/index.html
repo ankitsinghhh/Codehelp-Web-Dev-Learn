@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - log in or sign up </title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="images/logo-mobile.png">
+    <script src="https://kit.fontawesome.com/d77eda7d8e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- for desktop and tablet view  -->
+    <div class="hidden md:block">
+
+        <!-- section-1 -->
+        <section class="bg-[#F0F2F5]">
+            <!-- inner div container -->
+            <div class=" max-w-[1024px] mx-auto gap-10 flex flex-row justify-between py-24 text-[#333333] px-[1.3rem]">
+                <!-- left-part -->
+                <div>
+                    <!-- logo -->
+                    <div>
+                        <img src="images/logo.svg" alt="" height="70px" width="220px" class="m-[-20px]">
+                    </div>
+                    <p class="text-[36px] pt-2 leading-[72.5px] font-['helvetica']">Recent logins</p>
+                    <p class="text-[15px] leading-[24px] font-[400] text-[#3a3a3a] mt-[-1rem] pb-6">Click your picture
+                        or add an account.</p>
+                    <!-- 2 card ka section -->
+                    <div class="flex gap-4  ">
+                        <!-- 1st card -->
+                        <div
+                            class="w-[160px] h-[206px] bg-white rounded-lg border-2 hover:drop-shadow-lg relative cursor-pointer group transition-all duration-200">
+                            <img src="images/dp.jpg" alt="" class="w-full h-[160px] rounded-tr-lg rounded-tl-lg">
+                            <p class="text-center pt-2 text-[18px]">Ankit</p>
+
+                            <div
+                                class="px-2 py-1 -top-1 -left-1 bg-white rounded-full origin-bottom-left absolute  text-[12px] hidden group-hover:block z-10 ">
+                                <i class="fa-solid fa-xmark rounded-full " style="color: #bfbfbf;"></i>
+                            </div>
+                            <div
+                                class="rounded-full px-2 py-1 -top-1 -right-1 bg-red-600 absolute text-white text-[12px] z-10">
+                                13</div>
+                        </div>
+                        <!-- 2nd card  -->
+                        <div
+                            class="w-[160px] h-[206px] bg-white rounded-lg overflow-hidden border-2 hover:drop-shadow-lg cursor-pointer group transition-all duration-200">
+                            <div class="w-full h-[160px] bg-[#F5F6F7] flex items-center justify-center ">
+                                <i class="fa-solid fa-circle-plus text-[2.75rem]" style="color: #1976F2;"></i>
+                            </div>
+                            <p class="text-center pt-2 text-[18px] text-blue-500">Add Account</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- right-part -->
+                <div class="h-[496px] w-[396px]  flex flex-col gap-2  pt-6">
+                    <!-- square card -->
+                    <div
+                        class="h-[355px] w-full bg-white rounded-lg drop-shadow-xl flex flex-col gap-1 py-3 px-4 border ">
+                        <div>
+                            <input type="text" placeholder="Email address or phone number"
+                                class="w-full text-[#424243] my-1 py-3 text-start px-3 text-[17px]  rounded-lg border-slate-300 focus:border-blue-600 border-[1.5px] focus:outline-none focus:shadow-md">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Password"
+                                class="w-full text-[#424243] my-1 py-3 text-start px-3 text-[17px]  rounded-lg border-slate-300 focus:border-blue-600 border-[1.5px] focus:outline-none focus:shadow-md mb-3">
+                        </div>
+                        <a href="#">
+                            <button
+                                class="w-full rounded-md bg-[#0866ff] hover:bg-[#1976F2] text-white font-bold text-[20px] leading-[48px] mb-2 transition-all duration-200">
+                                Log in
+                            </button>
+                        </a>
+                        <p
+                            class="text-[#1976F2] text-center font-[400] text-[16px] mb-4 tracking-tighter hover:underline">
+                            <a href="#">Forgotten
+                                password?</a>
+                        </p>
+                        <hr class="h-1">
+                        <a href="#" class="self-center">
+                            <button
+                                class="px-4 mt-4 rounded-md hover:bg-[#39a324] bg-[#42B72A] text-white font-bold text-[17px] leading-[48px] transition-all duration-200">
+                                Create new Account
+                            </button>
+                        </a>
+                    </div>
+
+                    <!--card k niche ki line  -->
+                    <div class="text-center text-[16px] py-4 tracking-tighter">
+                        <span class="font-bold hover:underline cursor-pointer">Create a Page </span> for a celebrity,
+                        brand or business
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- footer section -->
+        <footer class=" max-w-[1024px] mx-auto text-[#7a7b7d] px-4">
+            <div class="flex flex-col pt-8">
+                <ul class="flex flex-row gap-3 text-[12px]">
+                    <li>English (UK)</li>
+                    <li>हिन्दी</li>
+                    <li>اردو</li>
+                    <li>தமிழ்</li>
+                    <li>বাংলা</li>
+                    <li>मराठी</li>
+                    <li>తెలుగు</li>
+                    <li>ગુજરાતી
+                    </li>
+                    <li>ಕನ್ನಡ</li>
+                    <li>മലയാളം</li>
+                    <li>Español
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-plus py-1 px-3 border rounded-sm border-slate-400 bg-[#F5F6F7]"></i>
+                    </li>
+                </ul>
+                <!-- horizontal rule -->
+                <hr class="my-2">
+
+                <div>
+                    <ul class="flex flex-row gap-4 font-normal text-[12px] flex-wrap gap-y-[0.2rem] mb-3">
+                        <li>Sign Up
+                        </li>
+                        <li>Log in
+                        </li>
+                        <li>Messenger
+                        </li>
+                        <li>Facebook
+                            Lite</li>
+                        <li>Videos
+                        </li>
+                        <li>Places
+                        </li>
+                        <li>Games
+                        </li>
+                        <li>Marketplace
+                        </li>
+                        <li>Meta
+                            Pay</li>
+                        <li>Meta
+                            Store</li>
+                        <li>Meta
+                            Quest</li>
+                        <li>Meta
+                            AI</li>
+                        <li>Instagram
+                        </li>
+                        <li>Threads
+                        </li>
+                        <li>Fundraisers
+                        </li>
+                        <li>Services
+                        </li>
+                        <li>Voting Information
+                            Centre</li>
+                        <li>Privacy
+                            Policy</li>
+                        <li>Privacy
+                            Centre</li>
+                        <li>Groups
+                        </li>
+                        <li>About
+                        </li>
+                        <li>Create
+                            ad</li>
+                        <li>Create
+                            Page</li>
+                        <li>Developers
+                        <li>Careers
+                        </li>
+                        <li>Cookies
+                        </li>
+                        <li>AdChoices</li>
+                        <li>Terms
+                        </li>
+                        <li>Help
+                        </li>
+                        <li>Contact uploading and
+                            non-users</li>
+                        <li>Settings
+                        </li>
+                        <li>Activity
+                            log</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="text-[11px] leading-[14.7px] mt-1 mb-6">Meta ©
+                        2024</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- //for mobile view -->
+
+    <div class="block md:hidden w-full h-[100vh] p-6 bg-gradient-to-r from-[#FEF8F4] to-[#EEF7FE] ">
+
+        <!-- container div -->
+        <div class="h-[100%]  flex flex-col justify-between items-center">
+            <!-- header div lang and photo -->
+            <div class="flex flex-col gap-10 items-center ">
+                <p class="text-[13px] font-semibold text-[#8B99A5]">English (UK)</p>
+                <!-- logo -->
+                <img src="images/logo-mobile.png" alt="" class="w-[60px] h-[60px]">
+            </div>
+
+            <!-- sign in -->
+            <div class="flex flex-col gap-4 w-full">
+
+                <input type="text" placeholder="Mobile Number or email address" class="p-4 rounded-xl border-[#bebebe] border-[1.5px] ">
+
+                <input type="text" placeholder="Password" class="p-4 rounded-xl border-[#bebebe] border-[1.5px]">
+
+                <div class="">
+                    <a href="#">
+                        <button class="bg-[#0064E0] w-full p-2 text-white font-semibold rounded-full cursor-pointer ">
+                            Log in
+                        </button>
+                    </a>
+                </div>
+
+
+
+                <p class="text-center text-[#6e6d6d]">Forgotten Password?</p>
+            </div>
+
+            <!-- lower -div and footer -->
+            <div class="flex flex-col gap-4 w-full">
+                <!-- create new acccount -->
+                <div class="">
+                    <a href="#">
+                        <button class="w-full border-[#9593937e] border-[1.55px] p-[0.4rem] text-[15px]  rounded-full">Create New Account</button>
+                    </a>
+                </div>
+
+                <!-- meta - logo -->
+                <img src="images/meta_logo.png " alt="" class="w-[60px] h-[12px] self-center">
+
+                <ul  class="flex flex-row gap-3 self-center text-[10px] text-[#8e8c8c]">
+                    <li>About</li>
+                    <li>Help</li>
+                    <li>More</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
