@@ -1,112 +1,112 @@
 // question 1 Write a function that takes two numbers as arguments and returns their sum.
 
-// function sum(a,b){
-//     return a+b;
-// }
+function sum(a,b){
+    return a+b;
+}
 
 
 //question-2c Write a function that takes a string as an argument and returns its length.
 
-// function strLength(a){
-//     return a.length;
-// }
+function strLength(a){
+    return a.length;
+}
 
-// console.log(strLength("question"))
+console.log(strLength("question"))
 
 //question3 - Write a program that takes two numbers and displays their sum, difference, product, and quotient.
 
-// function operations(a,b){
-//     console.log("sum ",a+b)
-//     console.log("difference ",a-b)
-//     console.log("product",a*b)
-//     console.log("quotient ",a/b)
-// }
+function operations(a,b){
+    console.log("sum ",a+b)
+    console.log("difference ",a-b)
+    console.log("product",a*b)
+    console.log("quotient ",a/b)
+}
 
-// operations(10,20);
+operations(10,20);
 
 //question4 - Write a function that takes two numbers as arguments and returns the larger number.
 
-// function max(a,b){
-//     if(a>b){
-//         return a;
-//     }
-//     else{
-//         return b;
-//     }
-// }
+function max(a,b){
+    if(a>b){
+        return a;
+    }
+    else{
+        return b;
+    }
+}
 
-// console.log(max(10,20))
+console.log(max(10,20))
 
 // question5 - Write a program that displays a string in reverse order.
 
-// reverse the string 
-// function reverse(str){
-//     let str2=""
-//     for(let i=0;i<str.length;i++){
+reverse the string 
+function reverse(str){
+    let str2=""
+    for(let i=0;i<str.length;i++){
         
-//         str2 = str2 + str[str.length-1-i]
-//     }
-//     return str2;
-// }
+        str2 = str2 + str[str.length-1-i]
+    }
+    return str2;
+}
 
-// console.log(reverse("reverse"))
+console.log(reverse("reverse"))
 
 
 
 //question6 -Write a program that takes a number and checks whether it is positive, negative, or zero.
-// function check(a){
-//     if(a>0){
-//         console.log("positive")
-//     }
-//     else if(a<0){
-//         console.log("negative")
+function check(a){
+    if(a>0){
+        console.log("positive")
+    }
+    else if(a<0){
+        console.log("negative")
 
-//     }
+    }
 
-//     else{
-//         console.log("zero")
-//     }
-// }
+    else{
+        console.log("zero")
+    }
+}
 
-// check(-19)
-// check(10)
-// check(0)
+check(-19)
+check(10)
+check(0)
 
 //question-7 - Write a program that takes a number and prints the multiplication table for that number.
 
-// function table(a){
-//     for(let i =0 ;i<=10;i++){
-//         console.log(a,"*",i,"=",a*i)
-//     }
-// }
-// table(10)
+function table(a){
+    for(let i =0 ;i<=10;i++){
+        console.log(a,"*",i,"=",a*i)
+    }
+}
+table(10)
 
 // // question-8 - Write a program that takes a number and calculates the sum of all numbers from 1 to that number.
 
-// function natsum(a){
-//     let total =0;
-//     for(let i =1;i<=10;i++){
-//         total = total + i;
-//     }
-//     return total;
-// }
+function natsum(a){
+    let total =0;
+    for(let i =1;i<=10;i++){
+        total = total + i;
+    }
+    return total;
+}
 
-// console.log(natsum(10))
+console.log(natsum(10))
 
 // // question-9 - Write a program that takes a string and prints out the number of vowels in the string.
 
-// function vowels(a){
-//     let count=0;
-//     for(let i in a){
+function vowels(a){
+    let count=0;
+    for(let i in a){
       
-//         if(a[i]=='a' || a[i]=='e' || a[i]=='i' || a[i]=='o' || a[i]=='u'){
-//             count = count + 1;
-//         }
-//     }
+        if(a[i]=='a' || a[i]=='e' || a[i]=='i' || a[i]=='o' || a[i]=='u'){
+            count = count + 1;
+        }
+    }
 
-//     return count;
-// }
-// console.log("count",vowels("amazingasyou"))
+    return count;
+}
+console.log("count",vowels("amazingasyou"))
 
 // //another apporach - much better one 
 // function vowels(a) {
