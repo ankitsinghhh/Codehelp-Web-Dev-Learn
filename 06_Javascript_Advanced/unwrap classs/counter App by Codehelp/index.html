@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/d77eda7d8e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- wrapper -->
+     <div class="w-[100vw] h-[100vh] flex flex-col justify-center items-center bg-[#344151] gap-10">
+        <!-- heading -->
+        <div class="text-[#0398d4] text-[20px] font-medium">Increment And Decrement</div>
+
+        <!-- counter card  -->
+        <div class="bg-white flex flex-row text-[25px] text-[#344151] rounded-sm gap-12 p-3 py-5 ">
+            <!-- increment button -->
+            <button onclick="decrement()" class="border-r-2 border-[#bfbfbf] px-6">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+            <!-- number -->
+            <div id="counter" class="font-bold">
+                0
+            </div>
+            <!-- decrement button -->
+            <button onclick="increment()" class="border-l-2 border-[#bfbfbf] px-6">
+              
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+     </div>
+
+    
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
