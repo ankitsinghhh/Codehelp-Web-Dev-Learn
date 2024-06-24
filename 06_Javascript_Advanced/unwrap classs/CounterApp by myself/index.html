@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <script src="https://kit.fontawesome.com/d77eda7d8e.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .wrapper {
+            background-color: azure;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .container {
+            background-color:#344151;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+            height:100%;
+            flex-direction: column;;
+        }
+
+        .card{
+            background-color: aliceblue;
+            align-items: center;
+            display: flex;
+            padding: 1rem 0;
+            border-radius:5px;
+            box-shadow: 0px 4px 10px black;
+            
+            
+        }
+        .dec, .inc, .numbercontainer{
+            height:100%;
+            padding:1rem;
+            
+        }
+
+        .inc{
+            border-left:1px solid black
+        }
+        .dec{
+            border-right:1px solid black;
+        }
+
+        .inc-btn,.dec-btn{
+            border:none;
+            background-color: aliceblue;
+            font-size: 1.5rem;
+            padding:0px 20px;
+            cursor:pointer;
+            transition: all 0.3s ease;
+            
+        }
+
+        .inc-btn:hover, .dec-btn:hover{
+            color:blue;
+            transform: scale(1.4);
+            /* font-weight:900; */
+            
+        }
+
+        .number{
+            font-size:1.5rem;
+
+            font-weight: 900;
+        }
+
+
+
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+       
+        <div class="container">
+
+            <h2 style="color:#0398D4; padding:20px;">Increment and Decrement</h2>
+            <div class="card">
+
+                
+                <div class="dec">
+                    <button class="dec-btn">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                </div>
+
+                <div class="numbercontainer">
+                    <p class="number">
+                        100
+                    </p>
+                </div>
+
+                <div class="inc">
+                    <button class="inc-btn">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="script.js">
+
+    </script>
+</body>
+
+</html>
