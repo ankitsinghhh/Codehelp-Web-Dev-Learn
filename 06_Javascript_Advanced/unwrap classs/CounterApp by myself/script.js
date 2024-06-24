@@ -9,7 +9,7 @@ let counter = Number(counterString);
 // console.log(counter)
 // console.log(typeof counter)
 
-counter=1000;
+
 
 
 
