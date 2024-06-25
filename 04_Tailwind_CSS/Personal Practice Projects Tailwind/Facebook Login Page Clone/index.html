@@ -7,7 +7,8 @@
     <title>Facebook - log in or sign up Clone</title>
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="images/logo-mobile.png">
-    <script src="https://kit.fontawesome.com/d77eda7d8e.js" crossorigin="anonymous"></script>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:;">
+    
 </head>
 
 <body>
@@ -23,7 +24,7 @@
                 <div>
                     <!-- logo -->
                     <div>
-                        <img src="images/logo.svg" alt="" height="70px" width="220px" class="m-[-20px]">
+                        <img src="images/logo.svg" alt="Facebook logo" height="70px" width="220px" class="m-[-20px]">
                     </div>
                     <p class="text-[36px] pt-2 leading-[72.5px] font-['helvetica']">Recent logins</p>
                     <p class="text-[15px] leading-[24px] font-[400] text-[#3a3a3a] mt-[-1rem] pb-6">Click your picture
@@ -33,12 +34,12 @@
                         <!-- 1st card -->
                         <div
                             class="w-[160px] h-[206px] bg-white rounded-lg border-2 hover:drop-shadow-lg relative cursor-pointer group transition-all duration-200">
-                            <img src="images/dp.jpg" alt="" class="w-full h-[160px] rounded-tr-lg rounded-tl-lg">
+                            <img src="images/dp.jpg" alt="Ankit's profile picture" class="w-full h-[160px] rounded-tr-lg rounded-tl-lg">
                             <p class="text-center pt-2 text-[18px]">Ankit</p>
 
                             <div
-                                class="px-2 py-1 -top-1 -left-1 bg-white rounded-full origin-bottom-left absolute  text-[12px] hidden group-hover:block z-10 ">
-                                <i class="fa-solid fa-xmark rounded-full " style="color: #bfbfbf;"></i>
+                                class=" -top-2 -left-2 absolute origin-left  text-[12px] hidden group-hover:block z-10 transition-all duration-200">
+                                <img src="images/circle-xmark-solid.svg" alt="" width="35px">
                             </div>
                             <div
                                 class="rounded-full px-2 py-1 -top-1 -right-1 bg-red-600 absolute text-white text-[12px] z-10">
@@ -48,7 +49,9 @@
                         <div
                             class="w-[160px] h-[206px] bg-white rounded-lg overflow-hidden border-2 hover:drop-shadow-lg cursor-pointer group transition-all duration-200">
                             <div class="w-full h-[160px] bg-[#F5F6F7] flex items-center justify-center ">
-                                <i class="fa-solid fa-circle-plus text-[2.75rem]" style="color: #1976F2;"></i>
+                            
+                                <img src="images/circle-plus-solid.svg" alt="" class="w-[40px]">
+                                
                             </div>
                             <p class="text-center pt-2 text-[18px] text-blue-500">Add Account</p>
                         </div>
@@ -62,11 +65,11 @@
                         class="h-[355px] w-full bg-white rounded-lg drop-shadow-xl flex flex-col gap-1 py-3 px-4 border ">
                         <div>
                             <input type="text" placeholder="Email address or phone number"
-                                class="w-full text-[#424243] my-1 py-3 text-start px-3 text-[17px]  rounded-lg border-slate-300 focus:border-blue-600 border-[1.5px] focus:outline-none focus:shadow-md">
+                                class="w-full text-[#424243] my-1 py-3 text-start px-3 text-[17px]  rounded-lg border-slate-300 focus:border-blue-600 border-[1.5px] focus:outline-none focus:shadow-md" aria-label="Email address or phone number">
                         </div>
                         <div>
-                            <input type="text" placeholder="Password"
-                                class="w-full text-[#424243] my-1 py-3 text-start px-3 text-[17px]  rounded-lg border-slate-300 focus:border-blue-600 border-[1.5px] focus:outline-none focus:shadow-md mb-3">
+                            <input type="password" placeholder="Password"
+                                class="w-full text-[#424243] my-1 py-3 text-start px-3 text-[17px]  rounded-lg border-slate-300 focus:border-blue-600 border-[1.5px] focus:outline-none focus:shadow-md mb-3" aria-label="Password">
                         </div>
                         <a href="#">
                             <button
@@ -103,21 +106,21 @@
         <footer class=" max-w-[1024px] mx-auto text-[#7a7b7d] px-4">
             <div class="flex flex-col pt-8">
                 <ul class="flex flex-row gap-3 text-[12px]">
-                    <li>English (UK)</li>
-                    <li>हिन्दी</li>
-                    <li>اردو</li>
-                    <li>தமிழ்</li>
-                    <li>বাংলা</li>
-                    <li>मराठी</li>
-                    <li>తెలుగు</li>
-                    <li>ગુજરાતી
-                    </li>
-                    <li>ಕನ್ನಡ</li>
-                    <li>മലയാളം</li>
-                    <li>Español
-                    </li>
+                    <li><a href="#">English (UK)</a></li>
+                    <li><a href="#">हिन्दी</a></li>
+                    <li><a href="#">اردو</a></li>
+                    <li><a href="#">தமிழ்</a></li>
+                    <li><a href="#">বাংলা</a></li>
+                    <li><a href="#">मराठी</a></li>
+                    <li><a href="#">తెలుగు</a></li>
+                    <li><a href="#">ગુજરાતી</a></li>
+                    <li><a href="#">ಕನ್ನಡ</a></li>
+                    <li><a href="#">മലയാളം</a></li>
+                    <li><a href="#">Español</a></li>
                     <li>
-                        <i class="fa-solid fa-plus py-1 px-3 border rounded-sm border-slate-400 bg-[#F5F6F7]"></i>
+                        <div class="py-1 px-3 border rounded-sm border-slate-400 bg-[#F5F6F7]">
+                            <img src="images/plus-solid.svg" alt="" width="10px">
+                        </div>
                     </li>
                 </ul>
                 <!-- horizontal rule -->
@@ -125,78 +128,46 @@
 
                 <div>
                     <ul class="flex flex-row gap-4 font-normal text-[12px] flex-wrap gap-y-[0.2rem] mb-3">
-                        <li>Sign Up
-                        </li>
-                        <li>Log in
-                        </li>
-                        <li>Messenger
-                        </li>
-                        <li>Facebook
-                            Lite</li>
-                        <li>Videos
-                        </li>
-                        <li>Places
-                        </li>
-                        <li>Games
-                        </li>
-                        <li>Marketplace
-                        </li>
-                        <li>Meta
-                            Pay</li>
-                        <li>Meta
-                            Store</li>
-                        <li>Meta
-                            Quest</li>
-                        <li>Meta
-                            AI</li>
-                        <li>Instagram
-                        </li>
-                        <li>Threads
-                        </li>
-                        <li>Fundraisers
-                        </li>
-                        <li>Services
-                        </li>
-                        <li>Voting Information
-                            Centre</li>
-                        <li>Privacy
-                            Policy</li>
-                        <li>Privacy
-                            Centre</li>
-                        <li>Groups
-                        </li>
-                        <li>About
-                        </li>
-                        <li>Create
-                            ad</li>
-                        <li>Create
-                            Page</li>
-                        <li>Developers
-                        <li>Careers
-                        </li>
-                        <li>Cookies
-                        </li>
-                        <li>AdChoices</li>
-                        <li>Terms
-                        </li>
-                        <li>Help
-                        </li>
-                        <li>Contact uploading and
-                            non-users</li>
-                        <li>Settings
-                        </li>
-                        <li>Activity
-                            log</li>
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="#">Log in</a></li>
+                        <li><a href="#">Messenger</a></li>
+                        <li><a href="#">Facebook Lite</a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="#">Places</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Marketplace</a></li>
+                        <li><a href="#">Meta Pay</a></li>
+                        <li><a href="#">Meta Store</a></li>
+                        <li><a href="#">Meta Quest</a></li>
+                        <li><a href="#">Meta AI</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Threads</a></li>
+                        <li><a href="#">Fundraisers</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Voting Information Centre</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Privacy Centre</a></li>
+                        <li><a href="#">Groups</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Create ad</a></li>
+                        <li><a href="#">Create Page</a></li>
+                        <li><a href="#">Developers</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">AdChoices</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Contact uploading and non-users</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Activity log</a></li>
                     </ul>
                 </div>
                 <div>
-                    <div class="text-[11px] leading-[14.7px] mt-1 mb-6">Meta ©
-                        2024</div>
+                    <div class="text-[11px] leading-[14.7px] mt-1 mb-6">Meta © 2024</div>
                 </div>
             </div>
         </footer>
     </div>
-
 
     <!-- //for mobile view -->
 
@@ -208,48 +179,41 @@
             <div class="flex flex-col gap-10 items-center ">
                 <p class="text-[13px] font-semibold text-[#8B99A5]">English (UK)</p>
                 <!-- logo -->
-                <img src="images/logo-mobile.png" alt="" class="w-[60px] h-[60px]">
+                <img src="images/logo-mobile.png" alt="Facebook mobile logo" class="w-[60px] h-[60px]">
             </div>
 
             <!-- sign in -->
             <div class="flex flex-col gap-4 w-full">
-
-                <input type="text" placeholder="Mobile Number or email address" class="p-4 rounded-xl border-[#bebebe] border-[1.5px] ">
-
-                <input type="text" placeholder="Password" class="p-4 rounded-xl border-[#bebebe] border-[1.5px]">
-
-                <div class="">
+                <input type="text" placeholder="Mobile Number or email address" class="p-4 rounded-xl border-[#bebebe] border-[1.5px] " aria-label="Mobile Number or email address">
+                <input type="password" placeholder="Password" class="p-4 rounded-xl border-[#bebebe] border-[1.5px]" aria-label="Password">
+                <div>
                     <a href="#">
                         <button class="bg-[#0064E0] w-full p-2 text-white font-semibold rounded-full cursor-pointer ">
                             Log in
                         </button>
                     </a>
                 </div>
-
-
-
                 <p class="text-center text-[#6e6d6d]">Forgotten Password?</p>
             </div>
 
             <!-- lower -div and footer -->
             <div class="flex flex-col gap-4 w-full">
                 <!-- create new acccount -->
-                <div class="">
+                <div>
                     <a href="#">
-                        <button class="w-full border-[#9593937e] border-[1.55px] p-[0.4rem] text-[15px]  rounded-full">Create New Account</button>
+                        <button class="w-full border-[#9593937e] border-[1.55px] p-[0.4rem] text-[15px] rounded-full">Create New Account</button>
                     </a>
                 </div>
 
                 <!-- meta - logo -->
-                <img src="images/metaLogo.png " alt="" class="w-[60px] h-[12px] self-center">
+                <img src="images/metaLogo.png" alt="Meta logo" class="w-[60px] h-[12px] self-center">
 
-                <ul  class="flex flex-row gap-3 self-center text-[10px] text-[#8e8c8c]">
-                    <li>About</li>
-                    <li>Help</li>
-                    <li>More</li>
+                <ul class="flex flex-row gap-3 self-center text-[10px] text-[#8e8c8c]">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">More</a></li>
                 </ul>
             </div>
-
         </div>
 
     </div>
