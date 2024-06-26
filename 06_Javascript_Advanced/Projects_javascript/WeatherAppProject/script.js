@@ -85,7 +85,7 @@ async function fetchUserWeatherInfo(coordinates){
           );
 
         const  data = await response.json(); //covnerting response into json
-        console.log("i am in your weather",data)
+        // console.log("i am in your weather",data)
 
         //error screen ko hta rha 
         ErrorContainer.classList.remove('active');
@@ -98,7 +98,7 @@ async function fetchUserWeatherInfo(coordinates){
         renderWeatherInfo(data);
     }
     catch(err) {
-        console.log("bhai mai error")
+        // console.log("bhai mai error")
         loadingScreen.classList.remove("active");
         //HW
          let error = document.querySelector('.error-container')
@@ -208,8 +208,9 @@ searchForm.addEventListener("submit", (e) => {
 })
 
 
-const ErrorContainer = document.querySelector(".error-container");
-const ErrorMessage = document.querySelector("[data-errroMsg]");
+const ErrorContainer = document.querySelector('.error-container');
+const ErrorMessage = document.getElementsByClassName('errorMsg');
+// console.log("jdlskjas;dfjl;dsffjfjadkfllsjdff",ErrorMessage);
 
 async function fetchSearchWeatherInfo(city) {
     loadingScreen.classList.add("active");
@@ -231,10 +232,12 @@ async function fetchSearchWeatherInfo(city) {
         renderWeatherInfo(data);
     }
     catch(err) {
-        console.log("hello mere bhai mai error hu ",err)
+        // console.log("hello mere bhai mai error hu ",err)
         loadingScreen.classList.remove('active');
         ErrorContainer.classList.add("active");
-        ErrorMessage.innerText = 'City  Not  Found'
+       
+        // ErrorMessage.innerText = err.message
+        // console.log(ErrorMessage.innerText);
 
     }
 }
