@@ -20,10 +20,10 @@
          </div>
 
          <!--main container - contains grant acces info , search weather and your weather  -->
-         <div class="weather-cotainer">
+         <div class="weather-container">
 
             <!-- grant location container -->
-             <div class="grant-location-container">
+             <div class="sub-container grant-location-container">
 
                 <img src="./assets/location.png" alt="" height="80" width="80" loading="lazy">
                 <p>Grant Location Access</p>
@@ -41,13 +41,13 @@
               </form>
 
               <!-- loading Screen Container -->
-               <div class="loading-container">
+               <div class="sub-container loading-container">
                 <img src="assets/loading.gif" alt="" width="150" height="150">
                 <p>Loading</p>
                </div>
 
                <!-- Show-Weather-info -->
-                <div class="user-info-container">
+                <div class="sub-container user-info-container">
 
                     <!-- cityname and Flag -->
                     <div class="name">
@@ -87,10 +87,34 @@
                             <p>Clouds</p>
                             <p data-cloudiness></p>
                            </div>
+
+                          <!-- card-4 -->
+                           <div class="parameter">
+                            <img src="assets/thermometer.png" alt="">
+                            <p>Feels Like</p>
+                            <p data-feel></p>
+                           </div>
+
+                          <!-- card-4 -->
+                           <div class="parameter">
+                            <img src="assets/pressure-gauge.png" alt="">
+                            <p>Pressure</p>
+                            <p data-pressure></p>
+                           </div>
+
+
                       </div>
+
+                     
                        
                       
                 </div>
+
+                 <!-- error container -->
+                 <div class="sub-container error-container">
+                  <img src="assets/not-found.png" alt="">
+                  <p data-errorMsg></p>
+                 </div>
          </div>
 
     </div>

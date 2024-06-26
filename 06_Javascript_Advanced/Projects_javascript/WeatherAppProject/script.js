@@ -7,6 +7,9 @@ const searchForm = document.querySelector("[data-searchForm]");
 const loadingScreen = document.querySelector(".loading-container");
 const userInfoContainer = document.querySelector(".user-info-container");
 
+// to change bggraident while changing tabs
+const wrapper = document.querySelector('.wrapper');
+
 //  needed variables initialisation
 const API_KEY = "fee513ea9bf03fca2e782696c18d26e6";
 let oldTab = userTab //suru me current Tab  , user tab hoga
@@ -82,6 +85,10 @@ async function fetchUserWeatherInfo(coordinates){
           );
 
         const  data = await response.json(); //covnerting response into json
+        console.log("i am in your weather",data)
+
+        //error screen ko hta rha 
+        ErrorContainer.classList.remove('active');
 
         // jab data aajae tb loader ko htado
         loadingScreen.classList.remove("active");
@@ -91,8 +98,12 @@ async function fetchUserWeatherInfo(coordinates){
         renderWeatherInfo(data);
     }
     catch(err) {
+        console.log("bhai mai error")
         loadingScreen.classList.remove("active");
         //HW
+         let error = document.querySelector('.error-container')
+        error.classList.add('active')
+
 
     }
     
@@ -112,16 +123,44 @@ function renderWeatherInfo(weatherInfo){
     const windspeed = document.querySelector("[data-windspeed]");
     const humidity = document.querySelector("[data-humidity]");
     const cloudiness = document.querySelector("[data-cloudiness]");
+    const feelslike = document.querySelector("[data-feel]");
+    const pressure = document.querySelector("[data-pressure]");
 
      //fetch values from weatherINfo object and put it UI elements
      cityName.innerText = weatherInfo?.name;
      countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`;
      desc.innerText = weatherInfo?.weather?.[0]?.description;
      weatherIcon.src = `http://openweathermap.org/img/w/${weatherInfo?.weather?.[0]?.icon}.png`;
-     temp.innerText = weatherInfo?.main?.temp;
-     windspeed.innerText = weatherInfo?.wind?.speed;
-     humidity.innerText = weatherInfo?.main?.humidity;
-     cloudiness.innerText = weatherInfo?.clouds?.all;
+     temp.innerText = `${weatherInfo?.main?.temp} °C`;
+     windspeed.innerText = `${weatherInfo?.wind?.speed} m/s`;
+     humidity.innerText = `${weatherInfo?.main?.humidity}%`;
+     cloudiness.innerText = `${weatherInfo?.clouds?.all}%`;
+     feelslike.innerText = `${weatherInfo?.main?.feels_like} °C`;
+     pressure.innerText = `${weatherInfo?.main?.pressure} hPa`;
+
+     let temperature = weatherInfo?.main?.temp
+    
+    if(wrapper && wrapper.classList.contains('backImage')){
+        if(temperature<20){
+            wrapper.classList.remove("warm");
+            wrapper.classList.remove("clear")
+            wrapper.classList.add("chill")
+         }else if(temperature>20 && temperature<=33){
+            wrapper.classList.remove("chill");
+            wrapper.classList.remove("warm")
+            wrapper.classList.add("clear")
+         }
+         else if(temperature>=33)
+         {
+            wrapper.classList.remove("chill");
+            wrapper.classList.remove("clear")
+            wrapper.classList.add("warm")
+         }
+    
+    }
+
+     
+ 
 
 }
 
@@ -162,27 +201,63 @@ searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
     let cityName = searchInput.value;
 
-    if(cityName === "")
+    if(cityName === "")  //if search input's value is empty , then return
         return;
-    else 
+    else  // if not empty, then call fetchSearchWeatherInfo function
         fetchSearchWeatherInfo(cityName);
 })
+
+
+const ErrorContainer = document.querySelector(".error-container");
+const ErrorMessage = document.querySelector("[data-errroMsg]");
 
 async function fetchSearchWeatherInfo(city) {
     loadingScreen.classList.add("active");
     userInfoContainer.classList.remove("active");
     grantAccessContainer.classList.remove("active");
+    ErrorContainer.classList.remove("active");
 
     try {
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
           );
-        const data = await response.json();
+          const data = await response.json();
+          if (!data.name) {
+              throw data;
+            }
+        loadingScreen.classList.remove('active');
         loadingScreen.classList.remove("active");
         userInfoContainer.classList.add("active");
         renderWeatherInfo(data);
     }
     catch(err) {
-        //hW
+        console.log("hello mere bhai mai error hu ",err)
+        loadingScreen.classList.remove('active');
+        ErrorContainer.classList.add("active");
+        ErrorMessage.innerText = 'City  Not  Found'
+
     }
 }
+
+
+
+
+
+searchTab.addEventListener('click', changeBackground)
+userTab.addEventListener('click', () => {
+    wrapper.classList.remove("backImage")
+    wrapper.classList.remove("chill")
+    wrapper.classList.remove("warm")
+    wrapper.classList.remove("clear")
+} )
+
+function changeBackground() {
+    
+    wrapper.classList.remove("chill")
+    wrapper.classList.remove("warm")
+    wrapper.classList.remove("clear")
+   
+    wrapper.classList.add("backImage");
+ 
+}
+
