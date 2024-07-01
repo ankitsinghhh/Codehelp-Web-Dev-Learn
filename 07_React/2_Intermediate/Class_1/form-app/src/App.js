@@ -1,6 +1,6 @@
 
 import './App.css';
-import {useState} from 'react'
+import { useState } from 'react'
 
 
 function App() {
@@ -25,20 +25,21 @@ function App() {
 
   // solution is to ===> pass an object to useState
 
-  const [formData, setFormData] = useState( { firstName:"", lastName:"",email:"" , comments:"", isVisible:true, mode:"" , favAnimal:""} )
+  const [formData, setFormData] = useState({ firstName: "", lastName: "", email: "", comments: "", isVisible: true, mode: "", favAnimal: "" })
 
   console.log(formData)
- 
-  function changeHandler(event){
 
-    setFormData(prevFormData =>{
+  function changeHandler(event) {
+
+    setFormData(prevFormData => {
       console.log(event.target)
-      const {name,value,checked , type} = event.target // destructuring
+      const { name, value, checked, type } = event.target // destructuring
 
-      return {...prevFormData, // previous state copy kr rha hai 
-        [name]: type==="checkbox" ? checked : value // jis value k kaaran trigger hoga usko update kr rhe hai
+      return {
+        ...prevFormData, // previous state copy kr rha hai 
+        [name]: type === "checkbox" ? checked : value // jis value k kaaran trigger hoga usko update kr rhe hai
         // property access krne k lie fomrs k lie specific square brackets lgane padhte h ---> its syntax --> no reason for this
-       }
+      }
     })
   }
 
@@ -46,162 +47,162 @@ function App() {
   //CONTROLLED COMPONENTS -->  maintain state inside components
 
 
-  function submitHandler(event){
+  function submitHandler(event) {
     event.preventDefault() // form submission default behavior ko block krna hai
     //print
-    console.log("finally submit kr diya" ,formData)
+    console.log("finally submit kr diya", formData)
   }
 
 
   return (
     <div className="App">
 
-    <fieldset>
-      <legend>
+      <fieldset>
+        <legend>
           Form-to-fill
-      </legend>
+        </legend>
 
 
-      <form onSubmit={submitHandler}>
-      <input
-       type="text" 
-       placeholder='first name'
-      //  onChange={changeFirstNameHandler}
-      onChange={changeHandler}
-      name = "firstName"
-      value={formData.firstName}
-       />
+        <form onSubmit={submitHandler}>
+          <input
+            type="text"
+            placeholder='first name'
+            //  onChange={changeFirstNameHandler}
+            onChange={changeHandler}
+            name="firstName"
+            value={formData.firstName}
+          />
 
-       <br></br>
-       <br/>
+          <br></br>
+          <br />
 
-      <input
-       type="text" 
-       placeholder='last name' 
-      //  onChange={changeLastNameHandler}
-      onChange={changeHandler}
-      name = "lastName"
-      value={formData.lastName}  // jab v input me write krenge tab re-render hoga aur fir tab bol rhe hai ki value ko is particular formData.lastname se initialize kr dena ----> achhe se smjh nhi aaya
-       />
+          <input
+            type="text"
+            placeholder='last name'
+            //  onChange={changeLastNameHandler}
+            onChange={changeHandler}
+            name="lastName"
+            value={formData.lastName}  // jab v input me write krenge tab re-render hoga aur fir tab bol rhe hai ki value ko is particular formData.lastname se initialize kr dena ----> achhe se smjh nhi aaya
+          />
 
-      <br/>
-      <input
-       type="email" 
-       placeholder='Enter your emial here' 
-      //  onChange={changeLastNameHandler}
-      onChange={changeHandler}
-      name = "email"
-      value={formData.email}
-       />
+          <br />
+          <input
+            type="email"
+            placeholder='Enter your emial here'
+            //  onChange={changeLastNameHandler}
+            onChange={changeHandler}
+            name="email"
+            value={formData.email}
+          />
 
-      <br/>
-      <br/>
+          <br />
+          <br />
 
-      <textarea 
-      placeholder='enter your commments'
-      onChange={changeHandler}
-      name = "comments"
-      value={formData.comments}
-      />
-      <br/>
-      <br/>
+          <textarea
+            placeholder='enter your commments'
+            onChange={changeHandler}
+            name="comments"
+            value={formData.comments}
+          />
+          <br />
+          <br />
 
-      <input 
-      type='checkbox'
-      onChange={changeHandler}
-      name = "isVisible"
-      id='isVisible'  // for label to access the checkbox by id
-      checked={formData.isVisible} // checbox k lie value ki field use nhi krte balki checked field ko use krte hai to know if checkbox is checked or not 
-      />
-      <label htmlFor='isVisible' > Am I Visible ? </label>
+          <input
+            type='checkbox'
+            onChange={changeHandler}
+            name="isVisible"
+            id='isVisible'  // for label to access the checkbox by id
+            checked={formData.isVisible} // checbox k lie value ki field use nhi krte balki checked field ko use krte hai to know if checkbox is checked or not 
+          />
+          <label htmlFor='isVisible' > Am I Visible ? </label>
 
-      <br/>
-      <br/>
-     
-      <input
-       type="radio"
-       onChange={changeHandler}
-       name = "mode"
+          <br />
+          <br />
 
-       value="Online-mode"
-       id="Online-mode"
-       checked={formData.mode==="Online-mode"} //agr online mode h toh checked hoga
-      />
-      <label htmlFor='Online-mode' > Online Mode </label>
+          <input
+            type="radio"
+            onChange={changeHandler}
+            name="mode"
 
-      <input
-       type="radio"
-       onChange={changeHandler}
-       name = "mode"
+            value="Online-mode"
+            id="Online-mode"
+            checked={formData.mode === "Online-mode"} //agr online mode h toh checked hoga
+          />
+          <label htmlFor='Online-mode' > Online Mode </label>
 
-       value="Offline-mode"
-       id="Offline-mode"
-       checked={formData.mode==="Offline-mode"}  //agr offline mode h toh checked hoga
-      />
-      <label htmlFor='Online-mode' > Offline Mode </label>
+          <input
+            type="radio"
+            onChange={changeHandler}
+            name="mode"
 
-      <br/>
+            value="Offline-mode"
+            id="Offline-mode"
+            checked={formData.mode === "Offline-mode"}  //agr offline mode h toh checked hoga
+          />
+          <label htmlFor='Online-mode' > Offline Mode </label>
+
+          <br />
 
 
-      <label htmlFor='favAnimal' >Tell me your favorite Animal</label>
-      <select
-      onChange={changeHandler}
-      name='favAnimal'
-      value = {formData.favAnimal}
-      id="favAnimal"
-      >
+          <label htmlFor='favAnimal' >Tell me your favorite Animal</label>
+          <select
+            onChange={changeHandler}
+            name='favAnimal'
+            value={formData.favAnimal}
+            id="favAnimal"
+          >
 
-        <option value="scorpio">Scorpio</option>
-       <option value="lion">Lion</option>
-       <option value="tiger">Tiger</option>
-       <option value="bear">Bear</option>
-       <option value="giraffe">Giraffe</option>
-       <option value="elephant">Elephant</option>
-       <option value="monkey">Monkey</option>
-        
-      </select>
+            <option value="scorpio">Scorpio</option>
+            <option value="lion">Lion</option>
+            <option value="tiger">Tiger</option>
+            <option value="bear">Bear</option>
+            <option value="giraffe">Giraffe</option>
+            <option value="elephant">Elephant</option>
+            <option value="monkey">Monkey</option>
 
-      <br/>
-      <br/>
+          </select>
 
-      {/* <input type="submit"
+          <br />
+          <br />
+
+          {/* <input type="submit"
       value=""
       ></input> */}
 
-      <button >Submit</button> 
-      {/* form k andar by default button ka type submit hi hota h 
+          <button >Submit</button>
+          {/* form k andar by default button ka type submit hi hota h 
       jab hum button form k andar daalte h tab , form me button click krne pr ek on Submit event trigger hota h 
       */}
-    
 
 
-      
-      </form>
-
-    </fieldset>
-
-   
 
 
-<br/>
-<br/>
+        </form>
 
-<fieldset>
-  <legend>Form values entered above</legend>
+      </fieldset>
 
-      <div> Your name : {formData.firstName} {formData.lastName} </div>
-      <div> Your email :{formData.email} </div>
-      <div> Your comments :{formData.comments} </div>
-      <div> Is visible : {formData.isVisible? "Yes" : "No"} </div>  
-      {/* // ternary operator ki use kr rhe hai, jab isVisible true h to "Yes" show kr rhe hai aur false to "No" show kr rhe hai */}
-      <div> Mode : {formData.mode} </div>
-      <div> Favourite Animal : {formData.favAnimal} </div>
-</fieldset>
 
-     
 
-      
-  
+
+      <br />
+      <br />
+
+      <fieldset>
+        <legend>Form values entered above</legend>
+
+        <div> Your name : {formData.firstName} {formData.lastName} </div>
+        <div> Your email :{formData.email} </div>
+        <div> Your comments :{formData.comments} </div>
+        <div> Is visible : {formData.isVisible ? "Yes" : "No"} </div>
+        {/* // ternary operator ki use kr rhe hai, jab isVisible true h to "Yes" show kr rhe hai aur false to "No" show kr rhe hai */}
+        <div> Mode : {formData.mode} </div>
+        <div> Favourite Animal : {formData.favAnimal} </div>
+      </fieldset>
+
+
+
+
+
     </div>
   );
 }
