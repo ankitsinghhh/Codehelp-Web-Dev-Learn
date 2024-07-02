@@ -10,7 +10,7 @@ const Navbar = (props) => {
 
 
     return (
-        <div className='flex justify-evenly bg-[#343C41] text-white'>
+        <div className='flex justify-between  text-richblack-100 items-center w-11/12 max-w-[1160px] py-4 mx-auto'>
 
             <Link to="/">
 
@@ -18,7 +18,7 @@ const Navbar = (props) => {
             </Link>
 
             <nav>
-                <ul className='flex gap-3'>
+                <ul className='flex gap-x-6 text-richblack-100 '>
                     <li>
                         <NavLink to="/">Home</NavLink>
                     </li>
@@ -33,24 +33,27 @@ const Navbar = (props) => {
 
             {/* login signup logout dashboard button */}
 
-            <div className='flex ml-5 mr-3 gap-3'>
+            <div className='flex items-center gap-x-4'>
                 {!isLoggedIn &&
                     <Link to="/login">
-                        <button>Login</button>
+                        <button className='bg-richblack-800 text-richblack-100 py-[8px] px-[12px] rounded-[8px] border border-richblack-700'
+                        >Log In</button>
                     </Link>
                 }
                 {!isLoggedIn &&
                     <Link to="/signup">
                         <button
-                        
+                        className='bg-richblack-800 text-richblack-100 py-[8px] px-[12px] rounded-[8px] border border-richblack-700'
                         >
-                            Signup
+                            Sign Up
                             </button>
                     </Link>
                 }
                 {isLoggedIn &&
                     <Link to="/">
-                        <button onClick={ ()=> {
+                        <button
+                        className='bg-richblack-800 text-richblack-100 py-[8px] px-[12px] rounded-[8px] border border-richblack-700'
+                        onClick={ ()=> {
                             setIsLoggedIn(false)
                             toast.success("Logged Out")
                         }} >
@@ -60,7 +63,9 @@ const Navbar = (props) => {
                 }
                 {isLoggedIn &&
                     <Link to="/dashboard">
-                        <button>Dashboard</button>
+                        <button
+                        className='bg-richblack-800 text-richblack-100 py-[8px] px-[12px] rounded-[8px] border border-richblack-700'
+                        >Dashboard</button>
                     </Link>
                 }
             </div>

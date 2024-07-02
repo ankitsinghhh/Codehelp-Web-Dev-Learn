@@ -9,10 +9,11 @@ root.render(
  
 
     <BrowserRouter>
-    
+    {/* broswer router rakha h taaki routes create kr paae  */}
 
     <App />
-    <Toaster />
+    <Toaster /> 
+    {/* toaster - for creating toasts */}
 
     </BrowserRouter>
  
