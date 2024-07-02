@@ -7,7 +7,7 @@ import {FcGoogle} from "react-icons/fc"
 const Template = ({title , desc1 , desc2, image, formType, setIsLoggedIn}) => {
   
   return (
-    <div className='max-w-[1160px] flex w-11/12 py-12 mx-auto gap-x-12 gap-y-0 justify-between '>
+    <div className='max-w-[1160px]  flex w-11/12 py-12 mx-auto gap-x-12 gap-y-0 justify-between '>
 
         {/* form data */}
         <div className='w-11/12 max-w-[450px] mx-0'>
