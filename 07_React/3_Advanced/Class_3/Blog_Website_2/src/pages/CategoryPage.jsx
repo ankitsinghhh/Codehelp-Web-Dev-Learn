@@ -12,7 +12,7 @@ const CategoryPage = () => {
     const category = location.pathname.split('/').at(-1);
 
     return (
-        <div>
+        <div className='pt-16'>
 
             <Header />
 

@@ -11,7 +11,7 @@ const TagPage = () => {
     const tag = location.pathname.split('/').at(-1);
     console.log(tag)
   return (
-    <div>
+    <div className='pt-16'>
 
         <Header/>
 
