@@ -46,11 +46,11 @@ useEffect(() => {
 }, [location.pathname])
 
   return (
-    <div className='pt-16'>
+    <div  className=' w-11/12 max-w-[630px] mx-auto pt-20  gap-y-7  flex flex-col justify-center items-center  '>
         <Header/>
 
-        <div>
-            <button
+        <div className='self-start'>
+            <button className='border px-3 py-2 rounded-lg'
             onClick={() => navigation(-1)}
             >
                 Back
@@ -67,11 +67,11 @@ useEffect(() => {
                 blog ?
                  (
                         <div>
-                            <BlogDetails post={blog} />
-                            <h2>Related Blogs</h2>
+                            <BlogDetails post={blog}  />
+                            <h2 className='text-2xl mt-4 mb-2 underline'>Related Blogs</h2>
                             {
                                 relatedBlogs.map(post => (
-                                    <div key = {post.id}>
+                                    <div className='my-6' key = {post.id}>
                                         <BlogDetails post={post}/>
                                     </div>
                                 ))

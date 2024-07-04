@@ -5,7 +5,7 @@ import Pagination from '../components/Pagination'
 
 const Home = () => {
   return (
-    <div>
+    <div className='py-20'>
       <Header/>
       <div>
         <Blogs/>

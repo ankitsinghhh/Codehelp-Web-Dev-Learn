@@ -11,7 +11,7 @@ const Blogs = () => {
 
 
   return (
-    <div className='w-11/12 max-w-[630px] mx-auto py-20  flex flex-col gap-y-7 justify-center items-center  ' >
+    <div className='w-11/12 max-w-[630px] mx-auto  gap-y-7  flex flex-col justify-center items-center  ' >
       {
         loading ? (
           <Spinner />

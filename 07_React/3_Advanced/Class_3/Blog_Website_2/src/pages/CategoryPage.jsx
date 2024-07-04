@@ -12,21 +12,21 @@ const CategoryPage = () => {
     const category = location.pathname.split('/').at(-1);
 
     return (
-        <div className='pt-16'>
+        <div className='py-20'>
 
             <Header />
 
-            <div>
+            <div className='flex items-center gap-x-4 w-[630px] mx-auto mb-6'>
 
-                <button
+                <button className='border px-3 py-2 rounded-lg'
                     onClick={() => navigate(-1)}
                 >
                     Back
                 </button>
 
 
-                <h2>
-                    Blogs on <span>#{category}</span>
+                <h2 className='font-bold text-2xl text-slate-500'>
+                    Blogs on <span className='text-slate-700'>#{category}</span>
                 </h2>
 
             </div>

@@ -11,6 +11,7 @@ import BlogPage from "./pages/BlogPage";
 import TagPage from "./pages/TagPage";
 import CategoryPage from "./pages/CategoryPage";
 
+
 export default function App() {
   const { fetchBlogPosts } = useContext(AppContext);
 
