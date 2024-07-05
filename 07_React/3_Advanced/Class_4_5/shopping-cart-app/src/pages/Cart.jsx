@@ -67,11 +67,11 @@ const Cart = () => {
             </div>
           ) :
           (
-            <div>
-              <h1> Your Cart is Empty</h1>
+            <div className="pt-20 h-[90vh] flex flex-col gap-4 justify-center items-center  ">
+              <h1 className="text-lg text-slate-700 font-bold"> Your Cart is Empty</h1>
               <Link to="/">
 
-                <button>
+                <button className="px-6 py-2 bg-green-600 text-white font-bold  rounded-full hover:scale-[1.1] transition-all duration-300 shadow-md">
                   Shop Now
                 </button>
 
