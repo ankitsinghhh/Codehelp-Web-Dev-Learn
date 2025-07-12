@@ -21,7 +21,7 @@ const createCategory = async (req,res) =>{
             name,
             description
         })
-
+ 
         console.log(categoryDetails)
 
         //return success response
