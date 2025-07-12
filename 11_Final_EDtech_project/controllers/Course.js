@@ -86,7 +86,7 @@ const createCourse = async (req,res)=>{
 
 
 //getAllcourses handler function 
-const showAllCourses = async (req,res)=>{
+const getAllCourses = async (req,res)=>{
     try {
         //fetch all courses from database - 
 

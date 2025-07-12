@@ -47,7 +47,7 @@ const updateProfile = async (req,res) =>{
     }
 }
 
-const deleteProfile = async (req,res) =>{
+const deleteAccount = async (req,res) =>{
     try {
       //getId
       const userId = req.user.id;

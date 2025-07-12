@@ -1,6 +1,8 @@
 const Section = require("../models/Section")
 const Course = require("../models/Course")
 
+
+//createSection
 const createSection = async (req,res) =>{
     try {
         //data fetch
@@ -48,7 +50,7 @@ const createSection = async (req,res) =>{
     }
 }
 
-
+//updateSection
 const updateSection = async(req,res) =>{
     try {
         //data fetch 
@@ -88,6 +90,7 @@ const updateSection = async(req,res) =>{
     }
 }
 
+//deleteSection
 const deleteSection = async (req,res) =>{
     try {
       //get id --- assuming that we are sending ID in params
