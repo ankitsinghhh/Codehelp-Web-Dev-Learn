@@ -96,7 +96,7 @@ const getAllCourses = async (req,res)=>{
             thumbnail:true,
             ratingAndReviews:true,
             studentsEnrolled:true
-
+ 
         }).populate("instructor").exec()
 
         //returning success response 
@@ -116,7 +116,55 @@ const getAllCourses = async (req,res)=>{
     }
 }
 
+const getCourseDetails = async () =>{
+    try {
+        //getCourseId from req ki body
+        const {courseId} = req.body
+
+        //finde course details 
+        const courseDetails = await Course.find({_id:courseId})
+                                                .populate({
+                                                    path:"instructor",
+                                                    populate:{
+                                                        path:"additionalDetails"
+                                                    },
+                                                })
+                                                .populate("category")
+                                                .populate("ratingAndReviews")
+                                                .populate({
+                                                    path:"courseContent",
+                                                    populate:{
+                                                        path:"subSection",
+                                                    },
+                                                })
+                                                .exec()
+        //validation 
+        if(!courseDetails){
+            return res.status(402).json({
+                success:false,
+                message:`could not find course with courseId : ${courseId}`
+            })
+        }
+
+        //return success response
+        return res.status(200).json({
+            success:true,
+            message:"Course Details Fetched Successfully",
+            courseDetails
+        })
+      
+    } catch (error) {
+        console.error(error)
+        res.status(500).json({
+            success:false,
+            error:error.message,
+            message: "Error while Fetching Course Details "
+        })
+    }
+}
+
 module.exports = {
     createCourse,
-    showAllCourses
+    getAllCourses,
+    getCourseDetails
 }
