@@ -92,6 +92,23 @@ exports.getAverageRating = async (req,res) =>{
            },
          ]);
         //return rating
+        if(result.length>0){
+
+          return res.status(200).json({
+            success:true,
+            message:"Average Rating fetched successfully",
+            averageRating:result[0].averageRating
+          })
+        }else{
+          //if not rating /review exist
+          return res.status(200).json({
+            success: false,
+            message: "Average Rating is 0, not ratings given till now ",
+            averageRating: 0 ,
+          });
+        }
+
+
 
 
 
@@ -107,3 +124,38 @@ exports.getAverageRating = async (req,res) =>{
 
 
 //get All Rating
+exports.getAllRating = async( req,res) =>{
+  try {
+    //getAllrating
+    const allReviews = await RatingAndReview.find()
+                                                  .sort({rating:"desc"})
+                                                  .populate({
+                                                    path:"user",
+                                                    select: "firstName lastName email image"
+                                              
+                                                  })
+                                                  .populate({
+                                                    path:"course",
+                                                    select:"courseName"
+                                                  })
+                                                  .exec() 
+    if(!allReviews){
+        return res.status(404).json({
+            success:false,
+            message:"No rating exist"
+        })
+    }
+    return res.status(200).json({
+        success:true,
+        message:"All reviews fetched successfully",
+        allReviews
+    })
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({
+        success:false,
+        message:"Error while getting the Average Rating",
+        error:error.message
+    })
+  }
+}
