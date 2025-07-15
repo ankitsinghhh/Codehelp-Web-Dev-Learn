@@ -120,7 +120,7 @@ const isAdmin =  (req,res,next) =>{
     }
 }
 
-mdoule.exports = {
+module.exports = {
     auth,
     isInstructor,
     isAdmin,
