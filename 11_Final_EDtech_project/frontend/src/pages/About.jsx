@@ -12,7 +12,7 @@ import Footer from '../components/common/Footer'
 
 const About = () => {
   return (
-    <div className='mx-auto mt-[100px] text-white'>
+    <div className='mx-auto mt-[100px] text-white w-11/12 max-w-maxContent'>
       {/* section 1 */}
       <section>
         <div>
