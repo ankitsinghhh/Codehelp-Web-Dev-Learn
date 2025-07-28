@@ -7,8 +7,21 @@ const User = require("../models/User")
 const auth =  (req,res,next) =>{
     try {
         //extract token 
-        const token = req.cookies.token
-        
+        // const token = req.cookies.token
+        // ✅ Extract token from multiple possible sources
+        const token =
+        req?.cookies?.token ||
+        (req?.headers?.authorization?.startsWith("Bearer ") &&
+          req.headers.authorization.split(" ")[1]) ||
+        req?.headers?.["x-access-token"] ||
+        req?.body?.token ||
+        req?.query?.token ||
+        null
+      
+
+        // Note: localStorage is not accessible on the server (Node.js)
+
+                
         // if token missing
         if(!token){
             return res.status(401).json({
