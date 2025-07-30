@@ -8,7 +8,13 @@ exports.createSubSection = async (req, res) => {
     try {
       // Extract necessary information from the request body
       const { sectionId, title, description } = req.body
-      const video = req.files.videoFile
+      const video = req.files.video
+
+      console.log("inside sub section ----------------------------------------------------------------->")
+      console.log("section id : ",sectionId)
+      console.log("title",title)
+      console.log("desc : ",description)
+      console.log("video : ",video)
   
       // Check if all necessary fields are provided
       if (!sectionId || !title || !description || !video) {
@@ -54,11 +60,20 @@ exports.createSubSection = async (req, res) => {
   
   exports.updateSubSection = async (req, res) => {
     try {
-      const { sectionId, title, description } = req.body
-      const subSection = await SubSection.findById(sectionId)
+      const { sectionId,subSectionId, title, description } = req.body
+      console.log(
+        "inside update sub section ----------------------------------------------------------------->"
+      );
+      console.log("section id : ", sectionId);
+      console.log("title", title);
+      console.log("desc : ", description);
+  
+      // Find the sub-section by its ID
+      const subSection = await SubSection.findById(subSectionId)
+      console.log("sub section after await ---> : ", subSection);
   
       if (!subSection) {
-        return res.status(404).json({
+        return res.status(401).json({
           success: false,
           message: "SubSection not found",
         })
@@ -82,10 +97,15 @@ exports.createSubSection = async (req, res) => {
       }
   
       await subSection.save()
+
+      const updatedSection = await Section.findById(sectionId).populate(
+        "subSection"
+      );
   
       return res.json({
         success: true,
         message: "Section updated successfully",
+        data:updatedSection
       })
     } catch (error) {
       console.error(error)
@@ -114,10 +134,15 @@ exports.createSubSection = async (req, res) => {
           .status(404)
           .json({ success: false, message: "SubSection not found" })
       }
+
+      const updatedSection = await Section.findById(sectionId).populate(
+        "subSection"
+      );
   
       return res.json({
         success: true,
         message: "SubSection deleted successfully",
+        data:updatedSection
       })
     } catch (error) {
       console.error(error)

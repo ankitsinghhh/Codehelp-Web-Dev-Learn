@@ -17,6 +17,8 @@ const auth =  (req,res,next) =>{
         req?.body?.token ||
         req?.query?.token ||
         null
+
+        console.log("this is the value of token : ----------> ",token )
       
 
         // Note: localStorage is not accessible on the server (Node.js)
