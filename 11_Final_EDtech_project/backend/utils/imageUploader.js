@@ -13,4 +13,4 @@ const uploadImageToCloudinary = async (file, folder, height,quality)=>{
     return await cloudinary.uploader.upload(file.tempFilePath,options)
 }
 
-module.exports = uploadImageToCloudinary;
+module.exports =  uploadImageToCloudinary ;
