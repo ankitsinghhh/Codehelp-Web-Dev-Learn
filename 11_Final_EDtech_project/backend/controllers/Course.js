@@ -139,8 +139,26 @@ exports.editCourse = async (req, res) => {
     const updates = req.body
     const course = await Course.findById(courseId)
 
+    console.log("this is updates ---> ",updates)
+
     if (!course) {
       return res.status(404).json({ error: "Course not found" })
+    }
+
+     // ✅ Update the category relation if changed
+     if (updates.category && updates.category !== course.category.toString()) {
+      // Remove course from old category
+      await Category.findByIdAndUpdate(course.category, {
+        $pull: { courses: course._id },
+      });
+
+      // Add course to new category
+      await Category.findByIdAndUpdate(updates.category, {
+        $push: { courses: course._id },
+      });
+
+      // Update course's category field
+      course.category = updates.category;
     }
 
     // If Thumbnail Image is found, update it
@@ -155,26 +173,15 @@ exports.editCourse = async (req, res) => {
     }
 
     // Update only the fields that are present in the request body
-    // for (const key in updates) {
-    //   if (updates.hasOwnProperty(key)) {
-    //     if (key === "tag" || key === "instructions") {
-    //       course[key] = JSON.parse(updates[key])
-    //     } else {
-    //       course[key] = updates[key]
-    //     }
-    //   }
-    // }
-
-	for (const key in updates) {
-		// safer hasOwnProperty guard
-		if (Object.prototype.hasOwnProperty.call(updates, key)) {
-		  if (key === 'tag' || key === 'instructions') {
-			course[key] = JSON.parse(updates[key]);
-		  } else {
-			course[key] = updates[key];
-		  }
-		}
-	  }
+    for (const key in updates) {
+      if (Object.prototype.hasOwnProperty.call(updates, key)) {
+        if (key === "tag" || key === "instructions") {
+          course[key] = JSON.parse(updates[key])
+        } else {
+          course[key] = updates[key]
+        }
+      }
+    }
 
     await course.save()
 

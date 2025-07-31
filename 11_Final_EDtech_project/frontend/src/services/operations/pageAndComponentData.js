@@ -12,7 +12,7 @@ export const getCatalogaPageData = async(categoryId) => {
 
         if(!response?.data?.success)
             throw new Error("Could not Fetch Category page data");
-
+        console.log(response.data)
          result = response?.data;
 
   }

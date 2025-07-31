@@ -25,7 +25,11 @@ function Navbar() {
       setLoading(true)
       try {
         const res = await apiConnector("GET", categories.CATEGORIES_API)
+        console.log(res.data)
+        console.log(res.data.data)
+        // setSubLinks(res.data)
         setSubLinks(res.data.data)
+        console.log("sublinks value _--------> : ",subLinks)
       } catch (error) {
         console.log("Could not fetch Categories.", error)
       }
@@ -79,8 +83,7 @@ function Navbar() {
                               ?.map((subLink, i) => (
                                 <Link
                                   to={`/catalog/${subLink.name
-                                    .split(" ")
-                                    .join("-")
+                                    .replace(/\W+/g, "-")
                                     .toLowerCase()}`}
                                   className="rounded-lg bg-transparent py-4 pl-4 hover:bg-richblack-50"
                                   key={i}
@@ -145,7 +148,7 @@ function Navbar() {
         </button>
       </div>
     </div>
-  )
+  );
 }
 
 export default Navbar
