@@ -34,6 +34,7 @@ const auth =  (req,res,next) =>{
 
         //verify the token 
         try{
+            console.log("about to verify the token---------------------------------------------------------------------")
             const decode = jwt.verify(token,process.env.JWT_SECRET)
             console.log(decode)
             req.user = decode
