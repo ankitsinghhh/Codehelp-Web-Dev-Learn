@@ -78,8 +78,10 @@ exports.verifyPayment = async(req, res) => {
     }
 
     let body = razorpay_order_id + "|" + razorpay_payment_id;
+    console.log("Loaded secret key:", process.env.RAZORPAY_KEY_SECRET);
+
     const expectedSignature = crypto
-        .createHmac("sha256", process.env.RAZORPAY_SECRET)
+        .createHmac("sha256", process.env.RAZORPAY_KEY_SECRET)
         .update(body.toString())
         .digest("hex");
 
