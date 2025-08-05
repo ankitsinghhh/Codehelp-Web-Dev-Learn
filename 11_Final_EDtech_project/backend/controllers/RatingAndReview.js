@@ -7,13 +7,18 @@ const Course = require('../models/Course')
 exports.createRating = async (req,res) =>{
     try {
         //get  userId
-        const userId = req.user.userId
+        const userId = req.user.id
         //fetch data from req 
         const {rating,review,courseId} = req.body
+        console.log("userId",userId)
+        console.log("req.user",req.user)
+        console.log("courseId",courseId)
+        // console.log("req.body",req.body)
         //check if user is enrolled or not 
         const courseDetails = await Course.findOne({
             _id:courseId,
-            studentsEnrolled: {$eleMatch:{$eq:userId}} 
+            // studentsEnrolled: {$eleMatch:{$eq:userId}} 
+            studentsEnrolled: userId
         })
 
         if(!courseDetails){
